@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Rock+Salt&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+h1 {
+    font-family: 'Rock Salt', 'Poppins', sans-serif;
+}
+.container {
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+
+}
+section {
+    height: auto;
+    border: solid 2px #000;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    /*display: block;*/
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #dc173f;
+}
+.copy {
+    background-color: black;
+}
+input {
+    padding: .5rem;
+    margin: .5rem;
+    width: 25%;
+    border-radius: 1.5rem;
+
+}
+.copy-message {
+    display: none;
+    position: absolute;
+    background-color: #dc173f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+}
+

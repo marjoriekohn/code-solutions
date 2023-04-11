@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <script src="app.js" defer></script>
+    <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<main class="container">
+    <h1>Javascript Functions</h1>
+<!-- first value function -->
+    <section>
+        <p>A function that will return the <strong>second</strong> element of an array.</p>
+        <input id="arrayInput" type="text" placeholder="Enter comma-separated numbers">
+        <button onclick="showFirstValue()">Get</button>
+        <button class="copy" onclick="copyFunctionCode('getFirstValue', this)">Copy</button>
+        <span class="copy-message">code copied!</span>
+        <article id="output1"></article>
+    </section>
+<!-- minutes to seconds -->
+    <section>
+        <p>A function that converts <strong>minutes into seconds</strong>.</p>
+        <input id="minutesInput" type="number" placeholder="Enter minutes">
+        <button onclick="showConvertedMinsToSecs()">Convert</button>
+        <button class="copy" onclick="copyFunctionCode('convertMinsToSecs', this)">Copy</button>
+        <span class="copy-message">code copied!</span>
+        <article id="output2"></article>
+    </section>
+<!-- check sum of values -->
+    <section>
+        <p>A function that will check if the sum of two values is <strong>less than 100</strong>.</p>
+        <input id="num1Input" type="number" placeholder="Enter first number">
+        <input id="num2Input" type="number" placeholder="Enter second number">
+        <button onclick="showLessThan100()">Check</button>
+        <button class="copy" onclick="copyFunctionCode('lessThan100', this)">Copy</button>
+        <span class="copy-message">code copied!</span>
+        <article id="output3"></article>
+    </section>
+</main>
+</body>
+</html>
