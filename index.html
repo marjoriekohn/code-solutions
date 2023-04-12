@@ -15,13 +15,13 @@
 <main class="container">
     <!-- first value function -->
     <section>
-        <p>A function that will return the <strong>first</strong> element of an array.</p>
-        <input id="arrayInput" placeholder="Enter comma-separated numbers" type="text">
+        <p>A function that will return the <strong>first element of an array</strong>.</p>
+        <input id="arrayInput" placeholder="Enter comma-separated list" type="text">
         <button onclick="showFirstValue()">Submit</button>
         <button class="copy" onclick="copyFunctionCode('getFirstValue', this)">
             <i class="fa-solid fa-code"></i>
         </button>
-        <span class="copy-message">code copied!</span>
+        <span class="copy-message">code copied</span>
         <article id="output1"></article>
     </section>
     <!-- minutes to seconds -->
@@ -32,12 +32,12 @@
         <button class="copy" onclick="copyFunctionCode('convertMinutes', this)">
             <i class="fa-solid fa-code"></i>
         </button>
-        <span class="copy-message">code copied!</span>
+        <span class="copy-message">code copied</span>
         <article id="output2"></article>
     </section>
     <!-- check sum of values -->
     <section>
-        <p>A function that will check if the sum of two values is <strong>less than 100</strong>.</p>
+        <p>A function that will check if the <strong>sum of two values is less than 100</strong>.</p>
         <div class="input-container">
             <input id="num1Input" placeholder="Enter first number" type="number" class="input-side-by-side">
             <input id="num2Input" placeholder="Enter second number" type="number" class="input-side-by-side">
@@ -46,9 +46,29 @@
         <button class="copy" onclick="copyFunctionCode('lessThan100', this)">
             <i class="fa-solid fa-code"></i>
         </button>
-        <span class="copy-message">code copied!</span>
+        <span class="copy-message">code copied</span>
         <article id="output3"></article>
     </section>
+    <!-- generate DNA strand   -->
+    <section>
+        <p>A function that generates a <strong>random strand of DNA</strong>.</p>
+        <input id="strandLengthInput" type="number" placeholder="Enter DNA strand length" min="1">
+        <button onclick="showCardValidationResult()">Submit</button>
+        <button class="copy" onclick="copyFunctionCode('validateAndIdentifyCard', this)">Copy</button>
+        <span class="copy-message">code copied</span>
+        <article id="output4"></article>
+    </section>
+    <!-- Credit Card Validation -->
+    <section>
+        <p>A function that checks if a credit card number is <strong>valid or invalid</strong> using the Luhn algorithm and identifies the card company.</p>
+        <input id="ccNumberInput" type="text" placeholder="Enter credit card number" min="16">
+        <button onclick="showCardValidationResult()">Submit</button>
+        <button class="copy" onclick="copyFunctionCode('validateAndIdentifyCard', this)">Copy</button>
+        <span class="copy-message">code copied</span>
+        <article id="output5"></article>
+    </section>
+
+
 </main>
 </body>
 </html>
