@@ -19,7 +19,7 @@
         <input id="arrayInput" placeholder="Enter comma-separated list" type="text">
         <button onclick="showFirstValue()">Submit</button>
         <button class="copy" onclick="copyFunctionCode('getFirstValue', this)">
-            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-clipboard"></i>
         </button>
         <span class="copy-message">code copied</span>
         <article id="output1"></article>
@@ -30,7 +30,7 @@
         <input id="minutesInput" placeholder="Enter minutes" type="number">
         <button onclick="showConvertedMinutes()">Submit</button>
         <button class="copy" onclick="copyFunctionCode('convertMinutes', this)">
-            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-clipboard"></i>
         </button>
         <span class="copy-message">code copied</span>
         <article id="output2"></article>
@@ -44,31 +44,44 @@
         </div>
         <button onclick="showLessThan100()">Submit</button>
         <button class="copy" onclick="copyFunctionCode('lessThan100', this)">
-            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-clipboard"></i>
         </button>
         <span class="copy-message">code copied</span>
         <article id="output3"></article>
+    </section>
+    <!-- Credit Card Validation -->
+    <section>
+        <p>A function that checks if a credit card number is <strong>valid or invalid</strong> using the Luhn algorithm.</p>
+        <input id="ccNumberInput" type="text" placeholder="Enter credit card number" min="16">
+        <button onclick="showCardValidationResult()">Submit</button>
+        <button class="copy" onclick="copyFunctionCode('validateAndIdentifyCard', this)">
+            <i class="fa-solid fa-clipboard"></i>
+        </button>
+        <span class="copy-message">code copied</span>
+        <article id="output4"></article>
     </section>
     <!-- generate DNA strand   -->
     <section>
         <p>A function that generates a <strong>random strand of DNA</strong>.</p>
         <input id="strandLengthInput" type="number" placeholder="Enter DNA strand length" min="1">
-        <button onclick="showCardValidationResult()">Submit</button>
-        <button class="copy" onclick="copyFunctionCode('validateAndIdentifyCard', this)">Copy</button>
-        <span class="copy-message">code copied</span>
-        <article id="output4"></article>
-    </section>
-    <!-- Credit Card Validation -->
-    <section>
-        <p>A function that checks if a credit card number is <strong>valid or invalid</strong> using the Luhn algorithm and identifies the card company.</p>
-        <input id="ccNumberInput" type="text" placeholder="Enter credit card number" min="16">
-        <button onclick="showCardValidationResult()">Submit</button>
-        <button class="copy" onclick="copyFunctionCode('validateAndIdentifyCard', this)">Copy</button>
+        <button onclick="showRandomDNAStrand()">Submit</button>
+        <button class="copy" onclick="copyFunctionCode('generateRandomDNA', this)">
+            <i class="fa-solid fa-clipboard"></i>
+        </button>
         <span class="copy-message">code copied</span>
         <article id="output5"></article>
     </section>
-
-
+    <!-- generates random number -->
+    <section>
+        <p>A guessing game function that generates a random number.</p>
+        <input id="guessInput" type="number" placeholder="Guess a number" min="1">
+        <button onclick="showRandomNumber()">Submit</button>
+        <button class="copy" onclick="copyFunctionCode('randomNumber', this)">
+            <i class="fa-solid fa-clipboard"></i>
+        </button>
+        <span class="copy-message"></span>
+        <article id="output6"></article>
+    </section>
 </main>
 </body>
 </html>

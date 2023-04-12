@@ -62,9 +62,7 @@ button {
     border-radius: 20px;
     text-align: center;
     text-decoration: none;
-    /*display: block;*/
     font-size: 1rem;
-    /*margin: 4px 2px;*/
     cursor: pointer;
 }
 
@@ -77,15 +75,10 @@ button:hover {
 }
 .copy-message {
     display: none;
-    /*position: absolute;*/
-    background-color: #dc173f;
+    position: relative;
+        bottom: 38px;
+    background-color: #000;
     color: white;
-    padding: .5rem;
-    margin: .5rem;
-    width: 100%;
     border-radius: 1.5rem;
+    width: 40%;
 }
-
-
-
-

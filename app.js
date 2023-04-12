@@ -5,18 +5,6 @@ const lessThan100 = (num1, num2) => { // adds two numbers, checks for > 100
 		let sum = num1 + num2;
 		return sum < 100;
 };
-const generateRandomDNA = (strandLength) => {
-		const returnBase = () => {
-				const dnaBases = ['A', 'T', 'C', 'G'];
-				return dnaBases[Math.floor(Math.random() * 4)];
-		};
-
-		const newStrand = [];
-		for (let i = 0; i < strandLength; i++) {
-				newStrand.push(returnBase());
-		}
-		return newStrand;
-};
 
 const validateAndIdentifyCard = (ccNumbers) => { // Validate credit card number
 		let sum = 0;
@@ -49,6 +37,20 @@ const validateAndIdentifyCard = (ccNumbers) => { // Validate credit card number
 				company: company,
 		};
 };
+const generateRandomDNA = (strandLength) => {
+		const returnBase = () => {
+				const dnaBases = ['A', 'T', 'C', 'G'];
+				return dnaBases[Math.floor(Math.random() * 4)];
+		};
+
+		const newStrand = [];
+		for (let i = 0; i < strandLength; i++) {
+				newStrand.push(returnBase());
+		}
+		return newStrand;
+};
+const randomNumber = () => Math.floor(Math.random() * 10 + 1);
+
 
 // HTML functions
 function showFirstValue() {
@@ -67,11 +69,6 @@ function showLessThan100() {
 		const num2 = parseInt(document.getElementById('num2Input').value);
 		document.getElementById('output3').innerHTML = `The sum of ${num1} and ${num2} is ${num1 + num2} which is${lessThan100(num1, num2) ? '' : ' not'} less than 100`;
 }
-function showRandomDNAStrand() {
-		const strandLength = document.getElementById('strandLengthInput').value;
-		const randomDNAStrand = generateRandomDNA(strandLength);
-		document.getElementById('outputRandomDNA').innerHTML = `Generated DNA strand: <strong>${randomDNAStrand.join('')}</strong>`;
-}
 
 function showCardValidationResult() {
 		const ccNumber = document.getElementById('ccNumberInput').value;
@@ -79,7 +76,17 @@ function showCardValidationResult() {
 		const cardInfo = validateAndIdentifyCard(ccNumbers);
 		const validationStatus = cardInfo.isValid ? 'valid' : 'invalid';
 		const cardCompany = cardInfo.company;
-		document.getElementById('output5').innerHTML = `The credit card number is <strong>${validationStatus}</strong> and belongs to <strong>${cardCompany}</strong>.`;
+		document.getElementById('output4').innerHTML = `The credit card number is <strong>${validationStatus}</strong> and belongs to <strong>${cardCompany}</strong>.`;
+}
+function showRandomDNAStrand() {
+		const strandLength = document.getElementById('strandLengthInput').value;
+		const randomDNAStrand = generateRandomDNA(strandLength);
+		document.getElementById('output5').innerHTML = `Generated DNA strand: <strong>${randomDNAStrand.join('')}</strong>`;
+}
+function showRandomNumber() {
+		const guess = parseInt(document.getElementById('guessInput').value);
+		const computer = randomNumber();
+		document.getElementById('output6').innerHTML = `You guessed: ${guess}. Computer guessed: ${computer}. ${guess === computer ? 'You got it!' : 'Aw, try again!'}`;
 }
 
 // copy code function
@@ -96,11 +103,14 @@ function copyFunctionCode(functionName, button) {
 				case 'lessThan100':
 						code = `const ${functionName} = ${lessThan100.toString()}`;
 						break;
+				case 'validateAndIdentifyCard':
+						code = `const ${functionName} = ${validateAndIdentifyCard.toString()}`;
+						break;
 				case 'generateRandomDNA':
 						code = `const ${functionName} = ${generateRandomDNA.toString()}`;
 						break;
-				case 'validateAndIdentifyCard':
-						code = `const ${functionName} = ${validateAndIdentifyCard.toString()}`;
+				case 'randomNumber':
+						code = `const ${functionName} = ${randomNumber.toString()}`;
 						break;
 		}
 
