@@ -9,7 +9,7 @@ h1 {
     font-family: 'Rock Salt', 'Poppins', sans-serif;
     color: #FFF;
     text-align: center;
-    padding: 4rem;
+    padding: 3rem;
     font-size: 4rem;
 }
 
@@ -80,5 +80,5 @@ button:hover {
     background-color: #000;
     color: white;
     border-radius: 1.5rem;
-    width: 40%;
+    width: 100%;
 }

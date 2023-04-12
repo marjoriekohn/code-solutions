@@ -122,8 +122,11 @@ function copyFunctionCode(functionName, button) {
 		document.body.removeChild(el);
 
 		const copyMessage = button.nextElementSibling;
-		copyMessage.style.display = 'inline-block';
+		// copyMessage.style.display = 'inline-block';
+		button.children.item(0).className = '';
+		button.children[0].innerHTML = 'code copied';
 		setTimeout(() => {
-				copyMessage.style.display = 'none';
+				button.children[0].className = 'fa-solid fa-clipboard';
+				button.children[0].innerHTML = '';
 		}, 2000);
 }
