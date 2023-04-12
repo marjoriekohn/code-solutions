@@ -1,11 +1,14 @@
 // utility functions
-const getFirstValue = array => array[0]; // returns first value of an array
-const convertMinutes = minutes => minutes *= 60; // converts minutes to seconds
+// function #1 - array[0]
+const getFirstValue = array => array[0];
+// function #2 - minutes to seconds
+const convertMinutes = minutes => minutes *= 60;
+// function #3 - sum of numbers
 const lessThan100 = (num1, num2) => { // adds two numbers, checks for > 100
 		let sum = num1 + num2;
 		return sum < 100;
 };
-
+// function #4 - validate credit card
 const validateAndIdentifyCard = (ccNumbers) => { // Validate credit card number
 		let sum = 0;
 		for (let i = ccNumbers.length - 2; i >= 0; i -= 2) {
@@ -37,22 +40,23 @@ const validateAndIdentifyCard = (ccNumbers) => { // Validate credit card number
 				company: company,
 		};
 };
+// function #5 - generate DNA
 const generateRandomDNA = (strandLength) => {
 		const returnBase = () => {
 				const dnaBases = ['A', 'T', 'C', 'G'];
 				return dnaBases[Math.floor(Math.random() * 4)];
 		};
-
 		const newStrand = [];
 		for (let i = 0; i < strandLength; i++) {
 				newStrand.push(returnBase());
 		}
 		return newStrand;
 };
+// function #6 - random number game
 const randomNumber = () => Math.floor(Math.random() * 10 + 1);
 
 
-// HTML functions
+
 function showFirstValue() {
 		const arrayInput = document.getElementById('arrayInput').value;
 		const array = arrayInput.split(',');
