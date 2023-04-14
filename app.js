@@ -33,7 +33,7 @@ const validateAndIdentifyCard = (ccNumbers) => { // Validate credit card number
 		} else if (ccNumbers[0] === 6) {
 				company = 'Discover';
 		} else {
-				company = 'company not found';
+				company = 'unknown company';
 		}
 		return { 		// Return validity and company
 				isValid: isValid,
@@ -56,24 +56,21 @@ const generateRandomDNA = (strandLength) => {
 const randomNumber = () => Math.floor(Math.random() * 10 + 1);
 
 
-
+// DOM FUNCTIONS
 function showFirstValue() {
 		const arrayInput = document.getElementById('arrayInput').value;
 		const array = arrayInput.split(',');
 		document.getElementById('output1').innerHTML = `First value: ${getFirstValue(array)}`;
 }
-
 function showConvertedMinutes() {
 		const minutes = parseInt(document.getElementById('minutesInput').value);
 		document.getElementById('output2').innerHTML = `${minutes} minutes is equal to ${convertMinutes(minutes)} seconds`;
 }
-
 function showLessThan100() {
 		const num1 = parseInt(document.getElementById('num1Input').value);
 		const num2 = parseInt(document.getElementById('num2Input').value);
 		document.getElementById('output3').innerHTML = `The sum of ${num1} and ${num2} is ${num1 + num2} which is${lessThan100(num1, num2) ? '' : ' not'} less than 100`;
 }
-
 function showCardValidationResult() {
 		const ccNumber = document.getElementById('ccNumberInput').value;
 		const ccNumbers = ccNumber.split('').map(Number);
