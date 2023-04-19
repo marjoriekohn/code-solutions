@@ -60,16 +60,16 @@ const randomNumber = () => Math.floor(Math.random() * 10 + 1);
 function showFirstValue() {
 		const arrayInput = document.getElementById('arrayInput').value;
 		const array = arrayInput.split(',');
-		document.getElementById('output1').innerHTML = `First value: ${getFirstValue(array)}`;
+		document.getElementById('output1').innerHTML = `[0] = "${getFirstValue(array)}"`;
 }
 function showConvertedMinutes() {
 		const minutes = parseInt(document.getElementById('minutesInput').value);
-		document.getElementById('output2').innerHTML = `${minutes} minutes is equal to ${convertMinutes(minutes)} seconds`;
+		document.getElementById('output2').innerHTML = `${minutes} minutes is ${convertMinutes(minutes)} seconds.`;
 }
 function showLessThan100() {
 		const num1 = parseInt(document.getElementById('num1Input').value);
 		const num2 = parseInt(document.getElementById('num2Input').value);
-		document.getElementById('output3').innerHTML = `The sum of ${num1} and ${num2} is ${num1 + num2} which is${lessThan100(num1, num2) ? '' : ' not'} less than 100`;
+		document.getElementById('output3').innerHTML = `${num1} + ${num2} = ${num1 + num2} which is${lessThan100(num1, num2) ? ' less' : ' more'} than 100.`;
 }
 function showCardValidationResult() {
 		const ccNumber = document.getElementById('ccNumberInput').value;
@@ -77,17 +77,17 @@ function showCardValidationResult() {
 		const cardInfo = validateAndIdentifyCard(ccNumbers);
 		const validationStatus = cardInfo.isValid ? 'valid' : 'invalid';
 		const cardCompany = cardInfo.company;
-		document.getElementById('output4').innerHTML = `The credit card number is <strong>${validationStatus}</strong> and belongs to <strong>${cardCompany}</strong>.`;
+		document.getElementById('output4').innerHTML = `This ${cardCompany} card is ${validationStatus}.`;
 }
 function showRandomDNAStrand() {
 		const strandLength = document.getElementById('strandLengthInput').value;
 		const randomDNAStrand = generateRandomDNA(strandLength);
-		document.getElementById('output5').innerHTML = `Generated DNA strand: <strong>${randomDNAStrand.join('')}</strong>`;
+		document.getElementById('output5').innerHTML = `${randomDNAStrand.join('')}`;
 }
 function showRandomNumber() {
 		const guess = parseInt(document.getElementById('guessInput').value);
 		const computer = randomNumber();
-		document.getElementById('output6').innerHTML = `You guessed: ${guess}. Computer guessed: ${computer}. ${guess === computer ? 'You got it!' : 'Aw, try again!'}`;
+		document.getElementById('output6').innerHTML = `Computer chose ${computer}. ${guess === computer ? 'YOU WIN!' : 'Try again!'}`;
 }
 
 // copy code function
