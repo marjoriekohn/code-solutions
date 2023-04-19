@@ -125,7 +125,7 @@ function copyFunctionCode(functionName, button) {
 		const copyMessage = button.nextElementSibling;
 		// copyMessage.style.display = 'inline-block';
 		button.children.item(0).className = '';
-		button.children[0].innerHTML = 'code copied';
+		button.children[0].innerHTML = 'copied';
 		setTimeout(() => {
 				button.children[0].className = 'fa-solid fa-clipboard';
 				button.children[0].innerHTML = '';

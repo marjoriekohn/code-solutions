@@ -2,37 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Functions</title>
+
+    <!--  Google Fonts (Rock Salt, Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Rock+Salt&display=swap" rel="stylesheet">
+
+    <!-- Javascript, FontAwesome, Bootstrap -->
     <script defer src="app.js"></script>
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/8d11417666.js"></script>
+
+    <!--  CSS Modularized -->
     <link href="main.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
-<h1>Javascript Functions</h1>
+<h1>WHAT THE FUNC!</h1>
 <main class="container">
     <!-- first value function -->
     <section>
-        <p>A function that will return the <strong>first element of an array</strong>.</p>
+        <p>A function that returns the first element of an array.</p>
         <input id="arrayInput" placeholder="Enter comma-separated list" type="text">
-        <button onclick="showFirstValue()">Submit</button>
-        <button class="copy" onclick="copyFunctionCode('getFirstValue', this)">
+        <div class="button-container">
+        <button class="side-by-side" onclick="showFirstValue()">Submit</button>
+        <button class="copy side-by-side" onclick="copyFunctionCode('getFirstValue', this)">
             <i class="fa-solid fa-clipboard"></i>
         </button>
-        <span class="copy-message">code copied</span>
+<!--        <span class="copy-message"></span>-->
         <article id="output1"></article>
+        </div>
     </section>
     <!-- minutes to seconds -->
     <section>
-        <p>A function that converts <strong>minutes into seconds</strong>.</p>
+        <p>A function that converts minutes into seconds.</p>
         <input id="minutesInput" placeholder="Enter minutes" type="number">
-        <button onclick="showConvertedMinutes()">Submit</button>
-        <button class="copy" onclick="copyFunctionCode('convertMinutes', this)">
+        <div class="button-container">
+        <button class="side-by-side" onclick="showConvertedMinutes()">Submit</button>
+        <button class="copy side-by-side" onclick="copyFunctionCode('convertMinutes', this)">
             <i class="fa-solid fa-clipboard"></i>
         </button>
-        <span class="copy-message">code copied</span>
+<!--        <span class="copy-message"></span>-->
         <article id="output2"></article>
     </section>
     <!-- check sum of values -->
@@ -42,46 +54,53 @@
             <input id="num1Input" placeholder="Enter first number" type="number" class="input-side-by-side">
             <input id="num2Input" placeholder="Enter second number" type="number" class="input-side-by-side">
         </div>
-        <button onclick="showLessThan100()">Submit</button>
-        <button class="copy" onclick="copyFunctionCode('lessThan100', this)">
+        <div class="button-container">
+        <button class="side-by-side" onclick="showLessThan100()">Submit</button>
+        <button class="copy side-by-side" onclick="copyFunctionCode('lessThan100', this)">
             <i class="fa-solid fa-clipboard"></i>
         </button>
-        <span class="copy-message">code copied</span>
+<!--        <span class="copy-message"></span>-->
         <article id="output3"></article>
     </section>
     <!-- Credit Card Validation -->
     <section>
         <p>A function that checks if a credit card number is <strong>valid or invalid</strong> using the Luhn algorithm.</p>
         <input id="ccNumberInput" type="text" placeholder="Enter credit card number" min="16">
-        <button onclick="showCardValidationResult()">Submit</button>
-        <button class="copy" onclick="copyFunctionCode('validateAndIdentifyCard', this)">
+        <div class="button-container">
+        <button class="side-by-side" onclick="showCardValidationResult()">Submit</button>
+        <button class="copy side-by-side" onclick="copyFunctionCode('validateAndIdentifyCard', this)">
             <i class="fa-solid fa-clipboard"></i>
         </button>
-        <span class="copy-message">code copied</span>
+<!--        <span class="copy-message"></span>-->
         <article id="output4"></article>
     </section>
     <!-- generate DNA strand   -->
     <section>
         <p>A function that generates a <strong>random strand of DNA</strong>.</p>
         <input id="strandLengthInput" type="number" placeholder="Enter DNA strand length" min="1">
-        <button onclick="showRandomDNAStrand()">Submit</button>
-        <button class="copy" onclick="copyFunctionCode('generateRandomDNA', this)">
+        <div class="button-container">
+        <button class="side-by-side" onclick="showRandomDNAStrand()">Submit</button>
+        <button class="copy side-by-side" onclick="copyFunctionCode('generateRandomDNA', this)">
             <i class="fa-solid fa-clipboard"></i>
         </button>
-        <span class="copy-message">code copied</span>
+<!--        <span class="copy-message"></span>-->
         <article id="output5"></article>
     </section>
     <!-- generates random number -->
     <section>
         <p>A guessing game function that <strong>generates a random number</strong>.</p>
         <input id="guessInput" type="number" placeholder="Guess a number between 1 - 10" min="1">
-        <button onclick="showRandomNumber()">Submit</button>
-        <button class="copy" onclick="copyFunctionCode('randomNumber', this)">
+        <div class="button-container">
+        <button class="side-by-side" onclick="showRandomNumber()">Submit</button>
+        <button class="copy side-by-side" onclick="copyFunctionCode('randomNumber', this)">
             <i class="fa-solid fa-clipboard"></i>
         </button>
-<!--        <a class="copy-message">code copied</a>-->
+<!--            <span class="copy-message"></span>-->
         <article id="output6"></article>
     </section>
 </main>
+<footer>
+    <p>&copy; 2023 ByteBuddies. All rights reserved.</p>
+</footer>
 </body>
 </html>
