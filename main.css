@@ -1,24 +1,30 @@
 :root {
     --headerfont: 'Rock Salt', Arial, sans-serif;
     --bodyfont: 'Poppins', Arial, sans-serif;
-    --background: #011140; /* oxford blue - main background */
-    --mainText: #E0E0E0; /* gray - main text */
-    --button: #466C8C; /* steel blue - buttons, icons, footer */
-    --hover: #F2937E; /* salmon - hover */
-    --heading: #D96B62; /* burnt sienna - headings, borders */
-    --label: #A65656; /* brick red - tags, labels */
+    --background: #232946;
+    --border: #121629;
+    --mainBackground: #b8c1ec;
+    --cardBackground: #eebbc3;
+    --paragraph: #121629;
+    --button: #eebbc3;
+    --buttonText: #232946;
+    --hover: #eebbc3;
+    --heading: #fffffe;
+    --label: #b8c1ec;
+    --icon: #eebbc3;
+
 }
 * {
-    margin: 0; /* reset margin and padding */
+    margin: 0;
     padding: 0;
-    box-sizing: border-box; /* ensures all elements are border-box */
+    box-sizing: border-box;
 }
 html, body {
     min-height: 100%;
     font-family: var(--bodyfont);
-    font-size: 18px; /* rem used from now on, based off this 18px, 1rem = 18px */
+    font-size: 18px;
     background-color: var(--background);
-    color: var(--mainText);
+    color: var(--paragraph);
 }
 h1 {
     font-family: var(--headerfont);
@@ -35,36 +41,34 @@ h1 {
     height: auto;
     margin: 0 auto;
     padding: .25rem;
-    /*text-align: center;*/
 }
 section {
     height: auto;
-    background-color: var(--button);
+    background-color: var(--mainBackground);
     padding: 1.5rem;
-    border: dashed 2px var(--heading);
+    border: dashed 2px var(--border);
     border-radius: 1.25rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 article {
-    color: var(--mainText);
+    color: var(--paragraph);
     text-align: center;
     word-break: break-word;
 }
 input {
-    background-color: var(--mainText);
+    background-color: var(--button);
     padding: .5rem;
     /*margin: 1rem;*/
     width: 100%;
-    border-color: var(--hover);
+    border-color: var(--border);
     border-radius: 1.5rem;
 }
 .input-container { /* these next three classes are for inputs/buttons that are side by side*/
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /*border: 1px solid #000;*/
     margin: .25rem;
 }
 .button-container {
@@ -72,7 +76,6 @@ input {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /*border: 1px solid #000;*/
     margin: .25rem;
 }
 .side-by-side {
@@ -85,21 +88,22 @@ input {
 }
 button {
     background-color: var(--background);
+    margin: 1rem;
     padding: .5rem;
-    /*margin: 1rem;*/
     width: 90%;
-    border-color: var(--hover);
-    border-radius: 1.5rem;
-    color: var(--mainText);
+    border: .1rem dashed var(--label);
+    border-radius: 4rem;
+    color: var(--button);
     font-size: 1rem;
     cursor: pointer;
 }
 button:hover {
-    background-color: var(--hover);
+    cursor: pointer;
+    color: var(--background);
+    background-color: var(--button);
+    border: .1rem dashed var(--background);
 }
-.copy {
-    background-color: var(--background);
-}
+
 .copy-message {
     display: none;
     position: relative;
@@ -110,10 +114,6 @@ button:hover {
     width: 100%;
 }
 footer {
-    background-color: var(--button);
-    font-size: .75rem;
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-    padding: .25rem;
+    padding-top: 2rem;
+    text-align: center;
 }
