@@ -25,43 +25,25 @@ This project is a simple website that showcases a collection of JavaScript funct
 
 Visit the live demo at [https://marymkohn.github.io/javascript-functions/](https://marymkohn.github.io/javascript-functions/).
 
-## Code Example
+## Future Updates
+ ### Adding and Updating Functions
+I plan to update and expand on current functions and add more complex functionalities. For instance, the credit card validation function can be enhanced to support more card types and can provide more detailed validation messages.
 
-One of the showcased functions is a credit card validator that uses the Luhn algorithm to check if a credit card number is valid. It also returns the company that the credit card number belongs to. This function demonstrates the quality and utility of the code in this repository.
-```Javascript
-// function #4 - validate credit card information
-const validateAndIdentifyCard = (ccNumbers) => {
-  let sum = 0;
-	for (let i = ccNumbers.length - 2; i >= 0; i -= 2) { // Luhn algorithm
-		let doubled = ccNumbers[i] * 2;
-		if (doubled > 9) {
-			doubled -= 9;
-		}
-		sum += doubled;
-	}
-	for (let i = ccNumbers.length - 1; i >= 0; i -= 2) {
-		sum += ccNumbers[i];
-	}
-	const isValid = sum % 10 === 0;
+ ### Add Pagination
+Since I plan on adding more functions, I will add pagination to provides a clear structure without overwhelming the user. This feature will be a library-like structure where users can explore different functionalities.
 
-	let company = ''; // Identify credit card company
-	if (ccNumbers[0] === 3) {
-		company = 'American Express';
-	} else if (ccNumbers[0] === 4) {
-		company = 'Visa';
-	} else if (ccNumbers[0] === 5) {
-		company = 'Mastercard';
-	} else if (ccNumbers[0] === 6) {
-		company = 'Discover';
-	} else {
-		company = 'unknown company';
-	}
-	return {  // Return validity and company
-		isValid: isValid,
-		company: company,
-	};
-};
-```
+ ### Increase Error Handling
+While some error handling is already in place, I plan on adding more error handling for user inputs. For example, in the credit card validation function, I can check for non-numeric characters or invalid lengths and provide appropriate feedback.
+
+ ### Write Tests for Unit
+As this project grows, I will add unit tests to ensure that my functions work as expected. This will make future refactoring or enhancements safer.
+
+ ### Implement Search Functionality
+As my library grows, I plan on adding a search bar to help users quickly find the function they're interested in.
+
+ ### Enhance UI
+To enhance user experience, I will be adding animations and transitions. For instance, a smooth scroll effect when navigating between functions and subtle animations when displaying results to elevate the overall feel of the site.
+
 
 ## Contributing
 

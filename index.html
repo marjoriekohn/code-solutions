@@ -11,7 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Rock+Salt&display=swap" rel="stylesheet">
 
     <!-- Javascript, FontAwesome, Bootstrap -->
-    <script defer src="app.js"></script>
+    <script defer src="js/copyFunctionCode.js" type="module"></script>
+    <script defer src="js/generateSections.js" type="module"></script>
+    <script defer src="js/myFunctions/validateAndIdentifyCard.js" type="module"></script>
+    <script defer src="js/myFunctions/generateRandomDNA.js" type="module"></script>
+    <script defer src="js/myFunctions/getFirstValue.js" type="module"></script>
+    <script defer src="js/myFunctions/randomNumber.js" type="module"></script>
+    <script defer src="js/myFunctions/convertMinutes.js" type="module"></script>
+    <script defer src="js/myFunctions/lessThan100.js" type="module"></script>
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/8d11417666.js"></script>
 
     <!--  CSS Modularized -->
@@ -21,112 +28,8 @@
 <body>
 
 <h1>WHAT THE FUNC!</h1>
-<main class="container">
-    <!-- first value function -->
-    <section>
-        <article>
-        <p>Get first element of an array.</p>
-        </article>
-        <div class="input-container">
-        <input id="arrayInput" placeholder="dog, cat, bird, fish" type="text">
-        </div>
-        <div class="button-container">
-        <button class="side-by-side" onclick="showFirstValue()">Submit</button>
-        <button class="copy side-by-side" onclick="copyFunctionCode('getFirstValue', this)">
-            <i class="fa-solid fa-clipboard"></i>
-        </button>
-        </div>
-<!--        <span class="copy-message"></span>-->
-        <article id="output1"></article>
+<main id="container">
 
-    </section>
-    <!-- minutes to seconds -->
-    <section>
-        <article>
-        <p>Convert minutes to seconds.</p>
-        </article>
-        <div class="input-container">
-        <input id="minutesInput" placeholder="1" type="number">
-        </div>
-        <div class="button-container">
-        <button class="side-by-side" onclick="showConvertedMinutes()">Submit</button>
-        <button class="copy side-by-side" onclick="copyFunctionCode('convertMinutes', this)">
-            <i class="fa-solid fa-clipboard"></i>
-        </button>
-        </div>
-<!--        <span class="copy-message"></span>-->
-        <article id="output2"></article>
-    </section>
-    <!-- check sum of values -->
-    <section>
-        <article>
-        <p>Verify the sum of values is < 100.</p>
-        </article>
-        <div class="input-container">
-            <input id="num1Input" placeholder="1" type="number" class="side-by-side">
-            <p> + </p>
-            <input id="num2Input" placeholder="1" type="number" class="side-by-side">
-        </div>
-        <div class="button-container">
-        <button class="side-by-side" onclick="showLessThan100()">Submit</button>
-        <button class="copy side-by-side" onclick="copyFunctionCode('lessThan100', this)">
-            <i class="fa-solid fa-clipboard"></i>
-        </button>
-        </div>
-<!--        <span class="copy-message"></span>-->
-        <article id="output3"></article>
-    </section>
-    <!-- Credit Card Validation -->
-    <section>
-        <article>
-        <p>Validate credit card numbers.</p>
-        </article>
-        <div class="input-container">
-        <input id="ccNumberInput" type="text" placeholder="Enter credit card number" min="16">
-        </div>
-        <div class="button-container">
-        <button class="side-by-side" onclick="showCardValidationResult()">Submit</button>
-        <button class="copy side-by-side" onclick="copyFunctionCode('validateAndIdentifyCard', this)">
-            <i class="fa-solid fa-clipboard"></i>
-        </button>
-        </div>
-<!--        <span class="copy-message"></span>-->
-        <article id="output4"></article>
-    </section>
-    <!-- generate DNA strand   -->
-    <section>
-        <article>
-        <p>Generate a random DNA strand.</p>
-        </article>
-        <div class="input-container">
-        <input id="strandLengthInput" type="number" placeholder="Enter DNA strand length" min="1">
-        </div>
-        <div class="button-container">
-        <button class="side-by-side" onclick="showRandomDNAStrand()">Submit</button>
-        <button class="copy side-by-side" onclick="copyFunctionCode('generateRandomDNA', this)">
-            <i class="fa-solid fa-clipboard"></i>
-        </button>
-        </div>
-<!--        <span class="copy-message"></span>-->
-        <article id="output5"></article>
-    </section>
-    <!-- generates random number -->
-    <section>
-        <article>
-        <p>Guess the random number.</p>
-        </article>
-        <div class="input-container">
-        <input id="guessInput" type="number" placeholder="Guess a number between 1 - 10" min="1">
-        </div>
-        <div class="button-container">
-        <button class="side-by-side" onclick="showRandomNumber()">Submit</button>
-        <button class="copy side-by-side" onclick="copyFunctionCode('randomNumber', this)">
-            <i class="fa-solid fa-clipboard"></i>
-        </button>
-        </div>
-<!--            <span class="copy-message"></span>-->
-        <article id="output6"></article>
-    </section>
 </main>
 <footer>
     <p>&copy; 2023 Mary Kohn. All rights reserved.</p>
