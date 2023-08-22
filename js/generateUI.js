@@ -1,22 +1,7 @@
 import {copyFunctionCode} from './copyFunctionCode.js';
-import {getFirstValue, getFirstValueMetadata} from "./myFunctions/getFirstValue.js";
-import {convertMinutes, convertMinutesMetadata} from "./myFunctions/convertMinutes.js";
-import {lessThan100, lessThan100Metadata} from "./myFunctions/lessThan100.js";
-import {validateAndIdentifyCard, validateAndIdentifyCardMetadata} from "./myFunctions/validateAndIdentifyCard.js";
-import {generateRandomDNA, generateRandomDNAMetadata} from "./myFunctions/generateRandomDNA.js";
-import {randomNumber, randomNumberMetadata} from "./myFunctions/randomNumber.js";
 
-export function generateMainSection() {
-    console.log("generateMainSection called");
-    generateUISection(getFirstValue, getFirstValueMetadata);
-    generateUISection(convertMinutes, convertMinutesMetadata);
-    generateUISection(lessThan100, lessThan100Metadata);
-    generateUISection(validateAndIdentifyCard, validateAndIdentifyCardMetadata);
-    generateUISection(generateRandomDNA, generateRandomDNAMetadata);
-    generateUISection(randomNumber, randomNumberMetadata);
-}
-
-export function generateUISection(functionToExecute, metadata) {
+export function generateUI(functionToExecute, metadata) {
+    
     console.log(`Generating UI section for ${metadata.title}`);
     const mainContainer = document.getElementById('container');
     const section = document.createElement('section');

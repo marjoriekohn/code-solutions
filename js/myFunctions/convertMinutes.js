@@ -1,4 +1,3 @@
-// function #2 - Convert Minutes
 export const convertMinutes = (minutes) => {
 		const hours = Math.floor(minutes / 60);
 		const remainingMinutes = minutes % 60;

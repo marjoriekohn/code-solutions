@@ -1,4 +1,3 @@
-// function #5 - generate DNA strand
 export const generateRandomDNA = (strandLength) => {
 		const returnBase = () => {
 				const dnaBases = ['A', 'T', 'C', 'G'];

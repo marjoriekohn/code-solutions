@@ -1,4 +1,3 @@
-// function #1 - array[0]
 export const getFirstValue = array => array[0];
 
 // Metadata about the function

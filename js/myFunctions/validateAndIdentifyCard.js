@@ -1,31 +1,46 @@
-// function #4 - validate credit card number
-export const validateAndIdentifyCard = (cardNumber) => { // Validate credit card number
-		let sum = 0;
-		for (let i = cardNumber.length - 2; i >= 0; i -= 2) {
-				let doubled = cardNumber[i] * 2;
-				if (doubled > 9) {
-						doubled -= 9;
+export const validateAndIdentifyCard = (creditCardNumber) => {
+		let sumOfForLoops = 0;
+		for (let i = creditCardNumber.length - 2; i >= 0; i -= 2) {
+				let doubleEveryOtherNumber = creditCardNumber[i] * 2;
+				if (doubleEveryOtherNumber > 9) {
+						doubleEveryOtherNumber -= 9;
 				}
-				sum += doubled;
+				sumOfForLoops += doubleEveryOtherNumber;
 		}
-		for (let i = cardNumber.length - 1; i >= 0; i -= 2) {
-				sum += cardNumber[i];
+		for (let i = creditCardNumber.length - 1; i >= 0; i -= 2) {
+				sumOfForLoops += creditCardNumber[i];
 		}
+		const isCardNumberValid = sumOfForLoops % 10 === 0;
 		
-		const isValid = sum % 10 === 0;
-		let company = ''; 	// Identify credit card company
-		if (cardNumber[0] === 3) {
-				company = 'American Express';
-		} else if (cardNumber[0] === 4) {
-				company = 'Visa';
-		} else if (cardNumber[0] === 5) {
-				company = 'Mastercard';
-		} else if (cardNumber[0] === 6) {
-				company = 'Discover';
-		} else {
-				company = 'unknown company';
+		let creditCardCompany = '';
+		let creditCardCompanyIcon = '';
+		
+		switch (creditCardNumber[0]) {
+				case 3:
+						creditCardCompany = 'American Express';
+						creditCardCompanyIcon = 'fa-brands fa-cc-amex';
+						break;
+				case 4:
+						creditCardCompany = 'Visa';
+						creditCardCompanyIcon = 'fa-brands fa-cc-visa';
+						break;
+				case 5:
+						creditCardCompany = 'Mastercard';
+						creditCardCompanyIcon = 'fa-brands fa-cc-mastercard';
+						break;
+				case 6:
+						creditCardCompany = 'Discover';
+						creditCardCompanyIcon = 'fa-brands fa-cc-discover';
+						break;
+				default:
+						creditCardCompany = 'unknown company';
+						creditCardCompanyIcon = 'fa-solid fa-credit-card';
 		}
-		return `Card is ${isValid ? `valid and is a ${company} card.` : "invalid"}`;
+		return {
+				isValid: isCardNumberValid,
+				company: creditCardCompany, 
+				icon: creditCardCompanyIcon
+		}
 };
 
 export const validateAndIdentifyCardMetadata = {
@@ -39,5 +54,7 @@ export const validateAndIdentifyCardMetadata = {
 		outputId: 'output4',
 		expectsArray: true,
 		processInput: (inputValue) => Array.from(inputValue).map(Number),
-		generateOutputText: (result) => result
+		generateOutputText: (result) => {
+				return `${result.isValid ? `Valid card number <i class="${result.icon}"></i>` : `Invalid card number <i class="${result.icon}"></i>`}`;
+		}
 };

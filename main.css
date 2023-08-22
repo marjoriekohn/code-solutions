@@ -12,20 +12,21 @@
     --heading: #fffffe;
     --label: #b8c1ec;
     --icon: #eebbc3;
-
 }
+
 * {
-    margin: 0;
+    /*margin: 0;*/
     padding: 0;
     box-sizing: border-box;
 }
 html, body {
-    min-height: 100%;
+    min-height: 100vh;
     font-family: var(--bodyfont);
     font-size: 18px;
     background-color: var(--background);
     color: var(--paragraph);
 }
+
 h1 {
     font-family: var(--headerfont);
     color: var(--heading);
@@ -38,19 +39,19 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     max-width: 45rem;
-    height: auto;
+    /*height: auto;*/
     margin: 0 auto;
     padding: .25rem;
 }
 section {
-    height: auto;
+    /*height: auto;*/
     background-color: var(--mainBackground);
     padding: 1.5rem;
     border: dashed 2px var(--border);
     border-radius: 1.25rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*flex-direction: column;*/
 }
 article {
     color: var(--paragraph);
@@ -60,37 +61,33 @@ article {
 input {
     background-color: var(--button);
     padding: .5rem;
-    /*margin: 1rem;*/
+    margin: 1rem .1rem;
     width: 100%;
     border-color: var(--border);
     border-radius: 1.5rem;
 }
 .input-container { /* these next three classes are for inputs/buttons that are side by side*/
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    /*flex-wrap: wrap;*/
     margin: .25rem;
 }
 .button-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: .25rem;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*flex-wrap: wrap;*/
+    /*margin: .25rem;*/
 }
 .side-by-side {
     flex: 1;
 }
-.input-container p { /* the plus sign between two boxes */
-    display: flex;
-    align-items: center;
-    margin: .1rem;
-}
+
 button {
     background-color: var(--background);
-    margin: 1rem;
+    margin: .5rem;
     padding: .5rem;
-    width: 90%;
+    width: 10%;
     border: .1rem dashed var(--label);
     border-radius: 4rem;
     color: var(--button);
@@ -108,8 +105,8 @@ button:hover {
     display: none;
     position: relative;
         bottom: 38px;
-    background-color: #000;
-    color: white;
+    background-color: var(--background);
+    color: var(--label);
     border-radius: 1.5rem;
     width: 100%;
 }
@@ -118,6 +115,17 @@ button:hover {
     pointer-events: none;
 }
 
+.pagination {
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    /*margin: .25rem;*/
+}
+
+#pageNumber {
+    color: var(--label);
+    padding: 1rem;
+}
 
 footer {
     padding-top: 2rem;

@@ -1,4 +1,3 @@
-// function #3 - sum of numbers
 export const lessThan100 = (num1, num2) => {
 		let sum = num1 + num2;
 		if (sum < 100) {

@@ -1,4 +1,3 @@
-// function #6 - random number game
 export const randomNumber = (userGuess) => {
 		const computerGuess = Math.floor(Math.random() * 10 + 1);
 		return {
