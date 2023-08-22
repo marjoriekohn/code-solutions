@@ -14,12 +14,13 @@ export const generateRandomDNA = (strandLength) => {
 
 // Metadata about the function
 export const generateRandomDNAMetadata = {
-		title: 'Generate Random DNA Sequence',
+		functionName: 'generateRandomDNA',
+		title: 'Generate random DNA sequence',
 		description: 'This function generates a random DNA sequence of a specified length.',
-		inputPlaceholder1: 'Enter length (e.g., 5)',
-		inputType1: 'number',
-		inputId1: 'dnaLengthInput',
-		buttonText: 'Generate DNA',
+		inputPlaceholder: 'Enter length (e.g., 5)',
+		inputType: 'number',
+		inputId: 'dnaLengthInput',
+		buttonText: 'Generate',
 		outputId: 'output5',
 		processInput: (inputValue) => [Number(inputValue)],
 		generateOutputText: (result) => `Generated DNA sequence: ${result}`

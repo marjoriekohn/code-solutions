@@ -7,13 +7,14 @@ export const convertMinutes = (minutes) => {
 
 // Metadata about the function
 export const convertMinutesMetadata = {
-		title: 'Convert minutes to hours and minutes',
+		functionName: 'convertMinutes',
+		title: 'Convert minutes to hours',
 		description: 'This function takes in a number of minutes and returns the equivalent in hours and minutes.',
-		inputPlaceholder: '120',
+		inputPlaceholder: 'Enter minutes',
 		inputType: 'number',
 		inputId: 'minutesInput',
 		buttonText: 'Convert',
 		outputId: 'output2',
-		processInput: (inputValue) => Number(inputValue),
+		processInput: (minutesInput) => [Number(minutesInput)],
 		generateOutputText: (result) => `Converted to: ${result}`
 };

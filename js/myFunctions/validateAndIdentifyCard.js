@@ -11,8 +11,8 @@ export const validateAndIdentifyCard = (cardNumber) => { // Validate credit card
 		for (let i = cardNumber.length - 1; i >= 0; i -= 2) {
 				sum += cardNumber[i];
 		}
+		
 		const isValid = sum % 10 === 0;
-
 		let company = ''; 	// Identify credit card company
 		if (cardNumber[0] === 3) {
 				company = 'American Express';
@@ -29,13 +29,15 @@ export const validateAndIdentifyCard = (cardNumber) => { // Validate credit card
 };
 
 export const validateAndIdentifyCardMetadata = {
-		title: 'Validate and Identify Credit Card',
+		functionName: 'validateAndIdentifyCard',
+		title: 'Validate and identify credit card',
 		description: 'This function takes in a credit card number and validates it, as well as identifies the credit card provider.',
-		inputPlaceholder1: 'Enter credit card number',
-		inputType1: 'text',
-		inputId1: 'cardNumberInput',
+		inputPlaceholder: 'Enter credit card number',
+		inputType: 'text',
+		inputId: 'cardNumberInput',
 		buttonText: 'Validate',
 		outputId: 'output4',
-		processInput: (inputValue) => [inputValue],
+		expectsArray: true,
+		processInput: (inputValue) => Array.from(inputValue).map(Number),
 		generateOutputText: (result) => result
 };

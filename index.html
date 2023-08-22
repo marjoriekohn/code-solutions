@@ -11,15 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Rock+Salt&display=swap" rel="stylesheet">
 
     <!-- Javascript, FontAwesome, Bootstrap -->
-    <script defer src="js/copyFunctionCode.js" type="module"></script>
+    <script defer src="js/app.js" type="module"></script>
     <script defer src="js/generateSections.js" type="module"></script>
-    <script defer src="js/myFunctions/validateAndIdentifyCard.js" type="module"></script>
-    <script defer src="js/myFunctions/generateRandomDNA.js" type="module"></script>
     <script defer src="js/myFunctions/getFirstValue.js" type="module"></script>
-    <script defer src="js/myFunctions/randomNumber.js" type="module"></script>
     <script defer src="js/myFunctions/convertMinutes.js" type="module"></script>
     <script defer src="js/myFunctions/lessThan100.js" type="module"></script>
+    <script defer src="js/myFunctions/validateAndIdentifyCard.js" type="module"></script>
+    <script defer src="js/myFunctions/generateRandomDNA.js" type="module"></script>
+    <script defer src="js/myFunctions/randomNumber.js" type="module"></script>
+    <script defer src="js/copyFunctionCode.js" type="module"></script>
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/8d11417666.js"></script>
+    <script>console.log("index.html script loaded");</script>
 
     <!--  CSS Modularized -->
     <link href="main.css" rel="stylesheet" type="text/css">
@@ -29,9 +31,13 @@
 
 <h1>WHAT THE FUNC!</h1>
 <main id="container">
-
 </main>
 <footer>
+    <div class="pagination">
+        <button class="page-arrow" id="prev-page"><i class="fas fa-chevron-left"></i></button>
+        <span class="page-number active" data-page="1">1</span>
+        <button class="page-arrow" id="next-page"><i class="fas fa-chevron-right"></i></button>
+    </div>
     <p>&copy; 2023 Mary Kohn. All rights reserved.</p>
 </footer>
 </body>

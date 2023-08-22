@@ -1,5 +1,6 @@
-import {generateFunctionSections} from './generateSections.js';
+import {generateMainSection} from './generateSections.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-		generateFunctionSections();
+		console.log("DOMContentLoaded event fired");
+		generateMainSection();
 });

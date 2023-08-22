@@ -1,35 +1,36 @@
-import { getFirstValue } from './myFunctions/getFirstValue.js';
-import { convertMinutes } from './myFunctions/convertMinutes.js';
-import { lessThan100 } from './myFunctions/lessThan100.js';
-import { validateAndIdentifyCard } from './myFunctions/validateAndIdentifyCard.js';
-import { generateRandomDNA } from './myFunctions/generateRandomDNA.js';
-import { randomNumber } from './myFunctions/randomNumber.js';
-
+import {getFirstValue} from './myFunctions/getFirstValue.js';
+import {convertMinutes} from './myFunctions/convertMinutes.js';
+import {lessThan100} from './myFunctions/lessThan100.js';
+import {validateAndIdentifyCard} from './myFunctions/validateAndIdentifyCard.js';
+import {generateRandomDNA} from './myFunctions/generateRandomDNA.js';
+import {randomNumber} from './myFunctions/randomNumber.js';
 
 // copy code function
-export function copyFunctionCode(functionName, button) {
+export function copyFunctionCode(functionName, buttonDiv) {
+		console.log('copyFunctionCode for ', functionName);
 		let code = '';
 
 		switch (functionName) {
 				case 'getFirstValue':
-						code = `const ${functionName} = ${getFirstValue.toString()}`;
+						code = getFirstValue.toString();
 						break;
 				case 'convertMinutes':
-						code = `const ${functionName} = ${convertMinutes.toString()}`;
+						code = convertMinutes.toString();
 						break;
 				case 'lessThan100':
-						code = `const ${functionName} = ${lessThan100.toString()}`;
+						code = lessThan100.toString();
 						break;
 				case 'validateAndIdentifyCard':
-						code = `const ${functionName} = ${validateAndIdentifyCard.toString()}`;
+						code = validateAndIdentifyCard.toString();
 						break;
 				case 'generateRandomDNA':
-						code = `const ${functionName} = ${generateRandomDNA.toString()}`;
+						code = generateRandomDNA.toString();
 						break;
 				case 'randomNumber':
-						code = `const ${functionName} = ${randomNumber.toString()}`;
+						code = randomNumber.toString();
 						break;
 		}
+		console.log("Captured code:", code);
 
 		const el = document.createElement('textarea');
 		el.value = code;
@@ -38,11 +39,11 @@ export function copyFunctionCode(functionName, button) {
 		document.execCommand('copy');
 		document.body.removeChild(el);
 
-		const copyMessage = button.nextElementSibling;
-		button.children.item(0).className = '';
-		button.children[0].innerHTML = 'copied';
+		const copyIcon = buttonDiv.children.item(1).children.item(0);
+		copyIcon.className = '';
+		copyIcon.innerHTML = 'copied';
 		setTimeout(() => {
-				button.children[0].className = 'fa-solid fa-clipboard';
-				button.children[0].innerHTML = '';
+				copyIcon.className = 'fa-solid fa-clipboard';
+				copyIcon.innerHTML = '';
 		}, 2000);
 }

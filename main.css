@@ -33,7 +33,7 @@ h1 {
     padding: 3rem;
     font-size: 2.5rem;
 }
-.container {
+#container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
@@ -113,6 +113,12 @@ button:hover {
     border-radius: 1.5rem;
     width: 100%;
 }
+
+.fa-solid.fa-clipboard {
+    pointer-events: none;
+}
+
+
 footer {
     padding-top: 2rem;
     text-align: center;
