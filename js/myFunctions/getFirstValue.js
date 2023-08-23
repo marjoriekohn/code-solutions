@@ -1,4 +1,12 @@
-export const getFirstValue = array => array[0];
+export const getFirstValue = array	=> array[0];
+
+// future updates:
+// 1. add validation to ensure input is an array
+// 2. add validation to ensure input is not empty, null, or undefined
+// 3. add allowances for different delimiters (not just comma) for the input string.
+// 4. add unit tests: test edge cases, expected behavior, invalid inputs, inputs with different delimiters
+// 5. add an option to get the first n values instead of just the first one.
+
 
 // Metadata about the function
 export const getFirstValueMetadata = {

@@ -43,6 +43,16 @@ export const validateAndIdentifyCard = (creditCardNumber) => {
 		}
 };
 
+// future updates:
+// 1. add validation to ensure input is a number
+// 2. add validation to ensure input consists only of digits and no other characters
+// 3. ensure the credit card number has a valid length (typically 13 to 19 digits).
+// 4. adding more card providers, or make the identification process more detailed	(identify the card provider based on the first 4 digits instead of just the first digit)
+// 5. Allow for card numbers with spaces or dashes and sanitize the input accordingly.
+// 6. separate the Luhn validation and card identification into two distinct functions.
+// 7. Use modern array methods like reduce for summing digits.
+// 8. add unit tests: test edge cases, expected behavior, invalid inputs, correct length, only contains digits
+
 export const validateAndIdentifyCardMetadata = {
 		functionName: 'validateAndIdentifyCard',
 		title: 'Validate and identify credit card',

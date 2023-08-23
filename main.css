@@ -52,12 +52,21 @@ section {
     /*display: flex;*/
     /*justify-content: center;*/
     /*flex-direction: column;*/
+    position: relative;
 }
 article {
     color: var(--paragraph);
     text-align: center;
     word-break: break-word;
 }
+.fa-circle-info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    padding: 1rem;
+}
+
 input {
     background-color: var(--button);
     padding: .5rem;
@@ -72,6 +81,12 @@ input {
     /*flex-wrap: wrap;*/
     margin: .25rem;
 }
+
+select {
+    background-color: var(--button);
+    margin: 1rem .1rem;
+}
+
 .button-container {
     display: flex;
     /*justify-content: center;*/

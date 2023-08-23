@@ -5,13 +5,19 @@ export function generateUI(functionToExecute, metadata) {
     console.log(`Generating UI section for ${metadata.title}`);
     const mainContainer = document.getElementById('container');
     const section = document.createElement('section');
+    const functionInformationIcon = document.createElement('i');
+    functionInformationIcon.className = 'fa-solid fa-circle-info';
+    functionInformationIcon.addEventListener('click', () => {
+        alert(metadata.description);
+    });
+    section.appendChild(functionInformationIcon);
 
-    // Article 1 - Title and Description
-    const article1 = document.createElement('article');
-    const p = document.createElement('p');
-    p.textContent = metadata.title;
-    article1.appendChild(p);
-    section.appendChild(article1);
+    // Title and Description
+    const titleContainer = document.createElement('article');
+    const functionTitle = document.createElement('p');
+    functionTitle.textContent = metadata.title;
+    titleContainer.appendChild(functionTitle);
+    section.appendChild(titleContainer);
 
     // Input
     const inputDiv = document.createElement('div');
@@ -24,7 +30,7 @@ export function generateUI(functionToExecute, metadata) {
     section.appendChild(inputDiv);
     
     // Second Input (if applicable)
-    if (metadata.inputPlaceholder2) {
+    if (metadata.inputId2) {
         const input2 = document.createElement('input');
         input.className = 'side-by-side';
         input2.className = 'side-by-side';
@@ -32,6 +38,29 @@ export function generateUI(functionToExecute, metadata) {
         input2.type = metadata.inputType2;
         input2.id = metadata.inputId2;
         inputDiv.appendChild(input2);
+        section.appendChild(inputDiv);
+    }
+    
+    // Third Input (if applicable)
+    if (metadata.dropdownMenuId) {
+        const dropdownMenu = document.createElement('select');
+        dropdownMenu.id = metadata.dropdownMenuId;
+
+        const option1 = document.createElement('option');
+        option1.value = metadata.option1;
+        option1.text = metadata.option1;
+        dropdownMenu.appendChild(option1);
+
+        const option2 = document.createElement('option');
+        option2.value = metadata.option2;
+        option2.text = metadata.option2;
+        dropdownMenu.appendChild(option2);
+
+        const option3 = document.createElement('option');
+        option3.value = metadata.option3;
+        option3.text = metadata.option3;
+        dropdownMenu.appendChild(option3);
+        inputDiv.appendChild(dropdownMenu);
         section.appendChild(inputDiv);
     }
 
@@ -58,14 +87,19 @@ export function generateUI(functionToExecute, metadata) {
     section.appendChild(article2);
 
     buttonDiv.addEventListener('click', (event) => {
-        console.log("Button clicked");
-        if (event.target.className === 'copy side-by-side') {
+        console.log(`${metadata.buttonText} button clicked`);
+        if (event.target.className.includes('copy')) {
             copyFunctionCode(metadata.functionName, event.target.parentNode);
         } else {
             const rawInputs = [
-              document.getElementById(metadata.inputId).value, metadata.inputId2 ? document.getElementById(metadata.inputId2).value : null
-            ].filter(val => val !== null); // removes null values from the array (for functions with only 1 input)
+                document.getElementById(metadata.inputId).value, 
+                metadata.inputId2 ? document.getElementById(metadata.inputId2).value : null,
+                metadata.dropdownMenuId ? document.getElementById(metadata.dropdownMenuId).value : null
+            ]
+            .filter(val => val !== null); // removes null values from the array (for functions with only 1 input)
+            
             const processedInputs = metadata.processInput ? metadata.processInput(...rawInputs) : rawInputs;
+            
             let result;
             try {
                 if (metadata.expectsArray) {
