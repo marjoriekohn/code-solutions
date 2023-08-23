@@ -1,21 +1,21 @@
 import {generateUI} from './generateUI.js';
-import {getFirstValue, getFirstValueMetadata} from "./myFunctions/getFirstValue.js";
 import {convertMinutes, convertMinutesMetadata} from "./myFunctions/convertMinutes.js";
-import {lessThan100, lessThan100Metadata} from "./myFunctions/lessThan100.js";
 import {validateAndIdentifyCard, validateAndIdentifyCardMetadata} from "./myFunctions/validateAndIdentifyCard.js";
 import {generateRandomDNA, generateRandomDNAMetadata} from "./myFunctions/generateRandomDNA.js";
 import {randomNumber, randomNumberMetadata} from "./myFunctions/randomNumber.js";
+import {fibonacciSequence, fibonacciSequenceMetadata} from "./myFunctions/Fibonacci.js";
+import {factorial, factorialMetadata} from "./myFunctions/factorial.js";
 
 let currentPage = 1;
 const sectionsPerPage = 4;
 
 export const sectionsData = [
-		{function: getFirstValue, metadata: getFirstValueMetadata},
-		{function: convertMinutes, metadata: convertMinutesMetadata},
-		{function: lessThan100, metadata: lessThan100Metadata},
 		{function: validateAndIdentifyCard, metadata: validateAndIdentifyCardMetadata},
 		{function: generateRandomDNA, metadata: generateRandomDNAMetadata},
-		{function: randomNumber, metadata: randomNumberMetadata}
+		{function: fibonacciSequence, metadata: fibonacciSequenceMetadata},
+		{function: factorial, metadata: factorialMetadata},
+		{function: convertMinutes, metadata: convertMinutesMetadata},
+		{function: randomNumber, metadata: randomNumberMetadata},
 ];
 
 const totalPages = Math.ceil(sectionsData.length / sectionsPerPage);

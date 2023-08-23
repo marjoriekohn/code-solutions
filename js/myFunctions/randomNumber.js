@@ -35,14 +35,13 @@ export const randomNumber = (userGuess, numberRange) => {
 
 
 // future updates:
-// 2. Return a more structured response (like an object) that provides both the user's guess and the computer's guess.
-// 4. Implement checks to ensure the user's guess is within the specified range.
 // 5. Add unit tests: test edge cases, expected behavior, and invalid inputs.
 
 
 // Metadata about the function
 export const randomNumberMetadata = {
 		functionName: 'randomNumber',
+		skills: ['random data generation', 'conditional logic', 'input validation'],
 		title: 'Generate a random number',
 		description: 'This function generates a random number. Can you guess the number?.',
 		inputPlaceholder: 'Enter a number between 1 and 10',
