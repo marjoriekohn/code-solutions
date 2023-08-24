@@ -51,7 +51,8 @@ export const randomNumberMetadata = {
 		option1: '1-25',
 		option2: '1-50',
 		option3: '1-100',
-		buttonText: 'Guess',
+		submitButtonText: 'Submit',
+		resetButtonText: 'Reset',
 		outputId: 'output6',
 		processInput: (userGuess, numberRange) => [Number(userGuess), String(numberRange)],
 		generateOutputText: (result) => {

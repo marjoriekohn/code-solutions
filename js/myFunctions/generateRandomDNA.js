@@ -52,7 +52,8 @@ export const generateRandomDNAMetadata = {
 		option2: 'A-T-C-G',
 		option3: 'Complementary DNA',
 		option4: 'RNA Transcription',
-		buttonText: 'Generate',
+		submitButtonText: 'Submit',
+		resetButtonText: 'Reset',
 		outputId: 'output5',
 		processInput: (inputValue, format) => [Number(inputValue), String(format)],
 		generateOutputText: (result) => result

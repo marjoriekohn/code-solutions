@@ -67,24 +67,53 @@ article {
     padding: 1rem;
 }
 
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 input {
     background-color: var(--button);
     padding: .5rem;
     margin: 1rem .1rem;
-    width: 100%;
     border-color: var(--border);
     border-radius: 1.5rem;
 }
-.input-container { /* these next three classes are for inputs/buttons that are side by side*/
+
+.row-container {
     display: flex;
-    /*justify-content: space-between;*/
-    /*flex-wrap: wrap;*/
-    margin: .25rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.row-container input, .row-container select {
+    flex: 1;
+    width: auto;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+input[type="number"] {
+    width: 100%;
+}
+
+input[type="radio"] + label {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.5rem;
 }
 
 select {
     background-color: var(--button);
     margin: 1rem .1rem;
+    max-width: 100%;
 }
 
 .button-container {

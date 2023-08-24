@@ -32,7 +32,8 @@ export const convertMinutesMetadata = {
 		option1: 'h:mm',
 		option2: 'hh:mm',
 		option3: 'hours:minutes',
-		buttonText: 'Convert',
+		submitButtonText: 'Submit',
+		resetButtonText: 'Reset',
 		outputId: 'convertMinutesOutput',
 		processInput: (minutes, format) => [Number(minutes), String(format)],
 		generateOutputText: (result) => result

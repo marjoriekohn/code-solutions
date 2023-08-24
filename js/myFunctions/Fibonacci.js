@@ -31,7 +31,8 @@ export const fibonacciSequenceMetadata = {
 		inputId: 'fibonacciSequenceInput',
 		inputType: 'number',
 		inputPlaceholder: 'Enter number',
-		buttonText: 'Generate',
+		submitButtonText: 'Submit',
+		resetButtonText: 'Reset',
 		outputId: 'fibonacciSequenceOutput',
 		processInput: (number) => [Number(number)],
 		generateOutputText: (result) => result

@@ -17,7 +17,8 @@ export const factorialMetadata = {
 		inputId: 'factorialInput',
 		inputType: 'number',
 		inputPlaceholder: 'Enter number',
-		buttonText: 'Calculate',
+		submitButtonText: 'Submit',
+		resetButtonText: 'Reset',
 		outputId: 'factorialOutput',
 		processInput: (number) => [Number(number)],
 		generateOutputText: (result) => result

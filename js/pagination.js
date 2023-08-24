@@ -5,6 +5,7 @@ import {generateRandomDNA, generateRandomDNAMetadata} from "./myFunctions/genera
 import {randomNumber, randomNumberMetadata} from "./myFunctions/randomNumber.js";
 import {fibonacciSequence, fibonacciSequenceMetadata} from "./myFunctions/Fibonacci.js";
 import {factorial, factorialMetadata} from "./myFunctions/factorial.js";
+import {computerGuessNumber, computerGuessNumberMetadata} from "./myFunctions/binarySearch.js";
 
 let currentPage = 1;
 const sectionsPerPage = 4;
@@ -13,6 +14,7 @@ export const sectionsData = [
 		{function: validateAndIdentifyCard, metadata: validateAndIdentifyCardMetadata},
 		{function: generateRandomDNA, metadata: generateRandomDNAMetadata},
 		{function: fibonacciSequence, metadata: fibonacciSequenceMetadata},
+		{function: computerGuessNumber, metadata: computerGuessNumberMetadata},
 		{function: factorial, metadata: factorialMetadata},
 		{function: convertMinutes, metadata: convertMinutesMetadata},
 		{function: randomNumber, metadata: randomNumberMetadata},
