@@ -12,6 +12,7 @@
     --heading: #fffffe;
     --label: #b8c1ec;
     --icon: #eebbc3;
+    --output: #657c00;
 }
 
 * {
@@ -161,6 +162,10 @@ button:hover {
 
 .fa-solid.fa-clipboard {
     pointer-events: none;
+}
+
+.output-text {
+    color: var(--output);
 }
 
 .pagination {

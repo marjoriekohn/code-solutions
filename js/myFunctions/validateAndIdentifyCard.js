@@ -3,11 +3,7 @@ export const validateAndIdentifyCard = (userInput) => {
 		let creditCardCompany = '';
 		let creditCardCompanyIcon = '';
 		const creditCardNumber = Array.from(userInput).map(Number);
-
-		if (userInput.contains(' ') || userInput.contains('-')) {
-				return 'Please remove spaces and dashes from the credit card number.';
-		}
-
+		
 		if (creditCardNumber.length !==	16) {
 				return 'Enter a 16 digit credit card number.';
 		}

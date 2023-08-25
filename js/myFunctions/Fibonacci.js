@@ -7,9 +7,12 @@ export const fibonacciSequence = (number) => {
 		if (number in memoizedFibonacciSequence) {
 				console.log('memoized value used');
 				return memoizedFibonacciSequence[number];
-		} else if (number <= 1) {
+		}
+		if (number <= 1) {
 				return number;
-		} else if (number <= 10) {
+		}
+				
+		if (number <= 10) {
 				memoizedFibonacciSequence[number] = fibonacciSequence(number - 1) + fibonacciSequence(number - 2);
 				console.log('memoized value created')
 				return memoizedFibonacciSequence[number];

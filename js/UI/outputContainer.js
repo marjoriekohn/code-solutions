@@ -1,6 +1,7 @@
 export function outputContainer(metadata) {
 				const outputContainer = document.createElement('article');
 				const outputText = document.createElement('p');
+				outputText.className = "output-text";
 				outputText.id = metadata.outputId;
 				outputContainer.appendChild(outputText);
 				return outputContainer;
