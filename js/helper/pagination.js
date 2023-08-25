@@ -1,11 +1,11 @@
-import {generateUI} from './generateUI.js';
-import {convertMinutes, convertMinutesMetadata} from "./myFunctions/convertMinutes.js";
-import {validateAndIdentifyCard, validateAndIdentifyCardMetadata} from "./myFunctions/validateAndIdentifyCard.js";
-import {generateRandomDNA, generateRandomDNAMetadata} from "./myFunctions/generateRandomDNA.js";
-import {randomNumber, randomNumberMetadata} from "./myFunctions/randomNumber.js";
-import {fibonacciSequence, fibonacciSequenceMetadata} from "./myFunctions/Fibonacci.js";
-import {factorial, factorialMetadata} from "./myFunctions/factorial.js";
-import {computerGuessNumber, computerGuessNumberMetadata} from "./myFunctions/binarySearch.js";
+import {generateUI} from '../UI/generateUI.js';
+import {convertMinutes, convertMinutesMetadata} from "../myFunctions/convertMinutes.js";
+import {validateAndIdentifyCard, validateAndIdentifyCardMetadata} from "../myFunctions/validateAndIdentifyCard.js";
+import {generateRandomDNA, generateRandomDNAMetadata} from "../myFunctions/generateRandomDNA.js";
+import {randomNumber, randomNumberMetadata} from "../myFunctions/randomNumber.js";
+import {fibonacciSequence, fibonacciSequenceMetadata} from "../myFunctions/Fibonacci.js";
+import {factorial, factorialMetadata} from "../myFunctions/factorial.js";
+import {computerGuessNumber, computerGuessNumberMetadata} from "../myFunctions/computerGuessNumber.js";
 
 let currentPage = 1;
 const sectionsPerPage = 4;
@@ -14,8 +14,8 @@ export const sectionsData = [
 		{function: validateAndIdentifyCard, metadata: validateAndIdentifyCardMetadata},
 		{function: generateRandomDNA, metadata: generateRandomDNAMetadata},
 		{function: fibonacciSequence, metadata: fibonacciSequenceMetadata},
-		{function: computerGuessNumber, metadata: computerGuessNumberMetadata},
 		{function: factorial, metadata: factorialMetadata},
+		{function: computerGuessNumber, metadata: computerGuessNumberMetadata},
 		{function: convertMinutes, metadata: convertMinutesMetadata},
 		{function: randomNumber, metadata: randomNumberMetadata},
 ];

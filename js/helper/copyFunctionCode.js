@@ -1,13 +1,13 @@
-import {convertMinutes} from './myFunctions/convertMinutes.js';
-import {validateAndIdentifyCard} from './myFunctions/validateAndIdentifyCard.js';
-import {generateRandomDNA} from './myFunctions/generateRandomDNA.js';
-import {randomNumber} from './myFunctions/randomNumber.js';
-import {fibonacciSequence} from "./myFunctions/Fibonacci.js";
-import {factorial} from "./myFunctions/factorial.js";
-import {computerGuessNumber} from "./myFunctions/binarySearch.js";
+import {convertMinutes} from '../myFunctions/convertMinutes.js';
+import {validateAndIdentifyCard} from '../myFunctions/validateAndIdentifyCard.js';
+import {generateRandomDNA} from '../myFunctions/generateRandomDNA.js';
+import {randomNumber} from '../myFunctions/randomNumber.js';
+import {fibonacciSequence} from "../myFunctions/Fibonacci.js";
+import {factorial} from "../myFunctions/factorial.js";
+import {computerGuessNumber} from "../myFunctions/computerGuessNumber.js";
 
 // copy code function
-export function copyFunctionCode(functionName, buttonDiv) {
+export function copyFunctionCode(functionName, targetElement) {
 		console.log('copyFunctionCode for ', functionName);
 		let code = '';
 
@@ -36,14 +36,13 @@ export function copyFunctionCode(functionName, buttonDiv) {
 		}
 		console.log("Captured code:", code);
 
-		const el = document.createElement('textarea');
-		el.value = code;
-		document.body.appendChild(el);
-		el.select();
-		document.execCommand('copy');
-		document.body.removeChild(el);
+		navigator.clipboard.writeText(code).then(function() {
+				console.log('Copying to clipboard was successful!');
+		}, function(err) {
+				console.error('Could not copy text: ', err);
+		});
 
-		const copyIcon = buttonDiv.children.item(1).children.item(0);
+		const copyIcon = targetElement.querySelector('i');
 		copyIcon.className = '';
 		copyIcon.innerHTML = 'copied';
 		setTimeout(() => {

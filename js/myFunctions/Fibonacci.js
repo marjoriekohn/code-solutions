@@ -26,13 +26,11 @@ export const fibonacciSequence = (number) => {
 export const fibonacciSequenceMetadata = {
 		functionName: 'fibonacciSequence',
 		skills: ['recursion', 'conditional logic', 'memoization'],
-		title: 'Generate Fibonacci Sequence',
+		title: 'Recursion: Fibonacci',
 		description: 'The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding numbers. This function takes in a number and returns the nth number in the Fibonacci sequence.',
 		inputId: 'fibonacciSequenceInput',
 		inputType: 'number',
 		inputPlaceholder: 'Enter number',
-		submitButtonText: 'Submit',
-		resetButtonText: 'Reset',
 		outputId: 'fibonacciSequenceOutput',
 		processInput: (number) => [Number(number)],
 		generateOutputText: (result) => result

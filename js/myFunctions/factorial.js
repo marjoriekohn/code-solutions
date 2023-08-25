@@ -12,13 +12,11 @@ export const factorial = (number) => {
 export const factorialMetadata = {
 		functionName: 'factorial',
 		skills: ['recursion', 'conditional logic'],
-		title: 'Calculate Factorial',
+		title: 'Recursion: Factorial',
 		description: 'This function takes in a number and returns its factorial.',
 		inputId: 'factorialInput',
 		inputType: 'number',
 		inputPlaceholder: 'Enter number',
-		submitButtonText: 'Submit',
-		resetButtonText: 'Reset',
 		outputId: 'factorialOutput',
 		processInput: (number) => [Number(number)],
 		generateOutputText: (result) => result

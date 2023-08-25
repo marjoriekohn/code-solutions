@@ -1,8 +1,13 @@
-export const validateAndIdentifyCard = (creditCardNumber) => {
+export const validateAndIdentifyCard = (userInput) => {
 
 		let creditCardCompany = '';
 		let creditCardCompanyIcon = '';
-		
+		const creditCardNumber = Array.from(userInput).map(Number);
+
+		if (userInput.contains(' ') || userInput.contains('-')) {
+				return 'Please remove spaces and dashes from the credit card number.';
+		}
+
 		if (creditCardNumber.length !==	16) {
 				return 'Enter a 16 digit credit card number.';
 		}
@@ -52,16 +57,13 @@ export const validateAndIdentifyCard = (creditCardNumber) => {
 export const validateAndIdentifyCardMetadata = {
 		functionName: 'validateAndIdentifyCard',
 		skills: ['array methods', 'conditional logic', 'regular expressions', 'algorithms', 'pattern matching', 'data validation'],
-		title: 'Validate and identify credit card',
-		description: 'This function validates a credit card number and identifies the credit card provider.',
+		title: 'Luhn Algorithm',
+		description: 'This function uses the Luhn Algorithm to validate a credit card number. After validation, it uses' +
+				' regular expressions to identify the credit card provider. For test credit card numbers, visit https://stripe.com/docs/testing',
 		inputPlaceholder: 'Enter credit card number',
 		inputType: 'number',
 		inputId: 'cardNumberInput',
-		submitButtonText: 'Submit',
-		resetButtonText: 'Reset',
-		outputId: 'output4',
-		expectsArray: true,
-		processInput: (creditCardNumber) => Array.from(creditCardNumber).map(Number),
+		outputId: 'cardNumberOutput',
 		generateOutputText: (result) => {
 				return `${result.isValid ? `Valid card number <i class="${result.icon}"></i>` : `Invalid card number <i class="${result.icon}"></i>`}`;
 		}

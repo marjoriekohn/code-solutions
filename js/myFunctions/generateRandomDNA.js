@@ -42,19 +42,14 @@ export const generateRandomDNA = (strandLength, format) => {
 export const generateRandomDNAMetadata = {
 		functionName: 'generateRandomDNA',
 		skills: ['random data generation', 'array manipulation', 'string formatting'],
-		title: 'Generate random DNA sequence',
+		title: 'DNA sequencing',
 		description: 'This function generates a random DNA sequence of a specified length and format. Complementary DNA and RNA transcription are also available.',
 		inputPlaceholder: 'Enter length (e.g., 5)',
 		inputType: 'number',
 		inputId: 'dnaLengthInput',
 		dropdownMenuId: 'dnaFormatSelector',
-		option1: 'ATCG',
-		option2: 'A-T-C-G',
-		option3: 'Complementary DNA',
-		option4: 'RNA Transcription',
-		submitButtonText: 'Submit',
-		resetButtonText: 'Reset',
-		outputId: 'output5',
+		dropdownMenuOptions: ['ATCG', 'A-T-C-G', 'Complementary DNA', 'RNA Transcription'],
+		outputId: 'dnaLengthOutput',
 		processInput: (inputValue, format) => [Number(inputValue), String(format)],
 		generateOutputText: (result) => result
 };

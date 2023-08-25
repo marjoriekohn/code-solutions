@@ -34,6 +34,11 @@ h1 {
     padding: 3rem;
     font-size: 2.5rem;
 }
+
+p {
+    margin: .25rem;
+}
+
 #container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -46,7 +51,7 @@ h1 {
 section {
     /*height: auto;*/
     background-color: var(--mainBackground);
-    padding: 1.5rem;
+    padding: 1rem;
     border: dashed 2px var(--border);
     border-radius: 1.25rem;
     /*display: flex;*/
@@ -67,53 +72,51 @@ article {
     padding: 1rem;
 }
 
-.input-container {
+.row-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex: 1;
+    justify-content: space-evenly;
+    /*margin: 0 0.5rem;*/
+    /*flex-wrap: nowrap;*/
+}
+
+.input-container, .row-container select, .row-container input {
+    flex: 1;
+    /*margin: 0 0.5rem;*/
+    width: 100%;
 }
 
 input {
     background-color: var(--button);
     padding: .5rem;
-    margin: 1rem .1rem;
     border-color: var(--border);
     border-radius: 1.5rem;
 }
 
-.row-container {
+select {
+    background-color: var(--button);
+    /*margin: 0 0.5rem;*/
+}
+
+.radio-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-}
-
-.row-container input, .row-container select {
-    flex: 1;
-    width: auto;
 }
 
 .radio-option {
+    flex: 1;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-input[type="number"] {
-    width: 100%;
 }
 
 input[type="radio"] + label {
     display: inline-flex;
     align-items: center;
-    margin-left: 0.5rem;
-}
+    margin-left: 0.1rem;
+    font-size: .9rem;
 
-select {
-    background-color: var(--button);
-    margin: 1rem .1rem;
-    max-width: 100%;
 }
 
 .button-container {
@@ -121,7 +124,7 @@ select {
     /*justify-content: center;*/
     /*align-items: center;*/
     /*flex-wrap: wrap;*/
-    /*margin: .25rem;*/
+    margin: .25rem;
 }
 .side-by-side {
     flex: 1;
@@ -129,7 +132,7 @@ select {
 
 button {
     background-color: var(--background);
-    margin: .5rem;
+    margin: .1rem;
     padding: .5rem;
     width: 10%;
     border: .1rem dashed var(--label);
@@ -138,6 +141,7 @@ button {
     font-size: 1rem;
     cursor: pointer;
 }
+
 button:hover {
     cursor: pointer;
     color: var(--background);

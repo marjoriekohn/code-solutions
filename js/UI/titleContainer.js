@@ -1,4 +1,4 @@
-export function createTitleContainer(metadata) {
+export function titleContainer(metadata) {
 		const titleContainer = document.createElement('article');
 		const functionTitle = document.createElement('p');
 		functionTitle.textContent = metadata.title;

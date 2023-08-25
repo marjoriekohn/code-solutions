@@ -1,5 +1,5 @@
-import {goToNextPage, goToPreviousPage, initializePagination} from "./pagination.js";
-import {computerGuessNumber, computerGuessNumberMetadata as metadata} from "./myFunctions/binarySearch.js";
+import {goToNextPage, goToPreviousPage, initializePagination} from "./helper/pagination.js";
+import {computerGuessNumber, computerGuessNumberMetadata as metadata} from "./myFunctions/computerGuessNumber.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 		console.log("DOMContentLoaded event fired");
@@ -10,9 +10,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		prevPageButton.addEventListener('click', goToPreviousPage);
 		nextPageButton.addEventListener('click', goToNextPage);
-});
-
-// for functions that don't require user input)
-document.addEventListener('DOMContentLoaded', () => {
-		document.getElementById('computerGuessNumberOutput').textContent = computerGuessNumber();
 });
