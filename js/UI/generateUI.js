@@ -3,10 +3,10 @@ import {informationIcon} from "./informationIcon.js";
 import {textInput} from "./textInput.js";
 import {dropdownMenu} from "./dropdownMenu.js";
 import {radioButtons} from "./radioButtons.js";
-import {displayResult, outputContainer} from "./outputContainer.js";
 import {copyButton} from "./copyButton.js";
 import {resetButton} from "./resetButton.js";
 import {submitButton} from "./submitButton.js";
+import {displayResult, outputContainer} from "./outputContainer.js";
 
 export function generateUI(functionToExecute, metadata) {
     
@@ -37,14 +37,14 @@ export function generateUI(functionToExecute, metadata) {
         section.appendChild(radioButtons(metadata));
     }
 
+    section.appendChild(outputContainer(metadata));
+    
     const buttonDiv = document.createElement('div');
     buttonDiv.className = 'button-container';
         buttonDiv.appendChild(submitButton(metadata, functionToExecute));
         buttonDiv.appendChild(resetButton(metadata, functionToExecute));
         buttonDiv.appendChild(copyButton(metadata, functionToExecute));
-        
     section.appendChild(buttonDiv);
-    section.appendChild(outputContainer(metadata));
     mainContainer.appendChild(section);
 
     if (metadata.autoExecute) {

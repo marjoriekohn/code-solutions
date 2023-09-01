@@ -1,7 +1,7 @@
-import {displayResult} from "./outputContainer.js";
 import {getTextValue} from "./textInput.js";
 import {getDropdownValue} from "./dropdownMenu.js";
 import {getRadioButtonValue} from "./radioButtons.js";
+import {displayResult} from "./outputContainer.js";
 
 export function submitButton(metadata, functionToExecute){
 		const submitButton = document.createElement('button');
@@ -29,6 +29,7 @@ export function submitButton(metadata, functionToExecute){
 				console.log('processedInputs: ' + processedInputs  + ' typeof processedInputs: ' + typeof processedInputs);
 				let result = functionToExecute(...processedInputs);
 				displayResult(metadata, result);
+
 		});
 		return submitButton;
 }

@@ -5,22 +5,20 @@ export const fibonacciSequence = (number) => {
 				return 'Enter a positive number.';
 		}
 		if (number in memoizedFibonacciSequence) {
-				console.log('memoized value used');
+				console.log(number);
+				console.log(memoizedFibonacciSequence[number])
 				return memoizedFibonacciSequence[number];
 		}
 		if (number <= 1) {
 				return number;
 		}
-				
-		if (number <= 10) {
-				memoizedFibonacciSequence[number] = fibonacciSequence(number - 1) + fibonacciSequence(number - 2);
-				console.log('memoized value created')
-				return memoizedFibonacciSequence[number];
-		} else {
-				memoizedFibonacciSequence[number] = fibonacciSequence(number - 1) + fibonacciSequence(number - 2);
-				console.log('memoized value created')
-				return memoizedFibonacciSequence[number];
-		}
+		
+		let first = fibonacciSequence(number - 1);
+		let second = fibonacciSequence(number - 2);
+		let result = first + second;
+		memoizedFibonacciSequence[number] = result;
+		console.log('Fibonacci Function Result: ' + first + ' + ' + second + ' = ' + result);
+		return result;
 }
 
 //future updates:

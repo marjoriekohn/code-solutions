@@ -20,6 +20,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html, body {
     min-height: 100vh;
     font-family: var(--bodyfont);
@@ -37,7 +38,7 @@ h1 {
 }
 
 p {
-    margin: .25rem;
+    /*margin: .25rem;*/
 }
 
 #container {

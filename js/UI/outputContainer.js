@@ -1,5 +1,6 @@
 export function outputContainer(metadata) {
 				const outputContainer = document.createElement('article');
+				
 				const outputText = document.createElement('p');
 				outputText.className = "output-text";
 				outputText.id = metadata.outputId;
@@ -8,6 +9,8 @@ export function outputContainer(metadata) {
 }
 
 export function displayResult(metadata, result) {
-		document.getElementById(metadata.outputId).innerHTML = metadata.generateOutputText(result);
-		console.log("Result:", result);
+		const outputText = document.getElementById(metadata.outputId);
+		const outputData = metadata.generateOutputText(result);
+		console.log("Output Container Result:", result);
+		return outputText.innerHTML	= outputData;
 }
