@@ -23,7 +23,7 @@ This project is a simple website that showcases a collection of JavaScript funct
 
 ## Demo
 
-Visit the live demo at [https://marymkohn.github.io/javascript-functions/](https://marymkohn.github.io/javascript-functions/).
+Visit the live demo at [https://marjoriekohn.github.io/javascript-functions/](https://marjoriekohn.github.io/javascript-functions/).
 
 ## Future Updates
  ### Adding and Updating Functions
@@ -63,9 +63,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact Information
 
-Mary Kohn
+Marjorie Kohn
 
-[LinkedIn](www.linkedin/in/marymkohn)
+[LinkedIn](www.linkedin/in/marjoriekohn)
 
 [E-mail](mailto:marymkohn@gmail.com)
 
