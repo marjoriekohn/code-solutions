@@ -23,7 +23,7 @@ This project is a simple website that showcases a collection of solutions to cha
 ## Demo
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/45399bab-8dd7-4538-84d8-51dc4622afee/deploy-status)](https://app.netlify.com/sites/marjoriekohn-codesolutions/deploys)
-Visit the live demo at [https://marjoriekohn.github.io/code-solutions/](https://marjoriekohn.github.io/code-solutions/).
+Visit the live demo at [https://codesolutions.marjoriekohn.com](https://codesolutions.marjoriekohn.com).
 
 
 ## Contributing
