@@ -1,18 +1,17 @@
-# JavaScript Functions Library
+# Code Solutions
 
 ## Table of Contents
 
 1. [Introduction](#introduction)
 2. [Technologies Used](#technologies-used)
 3. [Demo](#demo)
-4. [Code Example](#code-example)
-5. [Contributing](#contributing)
-6. [License](#license)
-7. [Contact Information](#contact-information)
+4. [Contributing](#contributing)
+5. [License](#license)
+6. [Contact Information](#contact-information)
 
 ## Introduction
 
-This project is a simple website that showcases a collection of JavaScript functions. Users can interact with these functions by inputting values and viewing the generated results. Additionally, a copy button is available for users to easily copy the function code for use in their own projects. The initial purpose of this project was to create a personal repository of reusable, high-quality JavaScript functions to improve coding efficiency.
+This project is a simple website that showcases a collection of solutions to challenge questions I encountered on websites like CodeWars, CodeSignal, and LeetCode. Users can interact with these solutions by inputting values and viewing the generated results. Additionally, a copy button is available for users to easily copy the source code. The initial purpose of this project was to create a personal repository of reusable, high-quality code to improve coding efficiency.
 
 ## Technologies Used
 
@@ -23,26 +22,8 @@ This project is a simple website that showcases a collection of JavaScript funct
 
 ## Demo
 
-Visit the live demo at [https://marjoriekohn.github.io/javascript-functions/](https://marjoriekohn.github.io/javascript-functions/).
-
-## Future Updates
- ### Adding and Updating Functions
-I plan to update and expand on current functions and add more complex functionalities. For instance, the credit card validation function can be enhanced to support more card types and can provide more detailed validation messages.
-
- ### Add Pagination
-Since I plan on adding more functions, I will add pagination to provides a clear structure without overwhelming the user. This feature will be a library-like structure where users can explore different functionalities.
-
- ### Increase Error Handling
-While some error handling is already in place, I plan on adding more error handling for user inputs. For example, in the credit card validation function, I can check for non-numeric characters or invalid lengths and provide appropriate feedback.
-
- ### Write Tests for Unit
-As this project grows, I will add unit tests to ensure that my functions work as expected. This will make future refactoring or enhancements safer.
-
- ### Implement Search Functionality
-As my library grows, I plan on adding a search bar to help users quickly find the function they're interested in.
-
- ### Enhance UI
-To enhance user experience, I will be adding animations and transitions. For instance, a smooth scroll effect when navigating between functions and subtle animations when displaying results to elevate the overall feel of the site.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/45399bab-8dd7-4538-84d8-51dc4622afee/deploy-status)](https://app.netlify.com/sites/marjoriekohn-codesolutions/deploys)
+Visit the live demo at [https://marjoriekohn.github.io/code-solutions/](https://marjoriekohn.github.io/code-solutions/).
 
 
 ## Contributing
@@ -63,10 +44,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact Information
 
-Marjorie Kohn
-
-[LinkedIn](www.linkedin/in/marjoriekohn)
-
-[E-mail](mailto:marymkohn@gmail.com)
+[LinkedIn](www.linkedin/in/marjoriekohn) | [E-mail](mailto:marymkohn@gmail.com) | [CodeWars](https://www.codewars.com/users/marjoriekohn) | [CodeSignal](https://app.codesignal.com/profile/marjoriekohn) | [LeetCode](https://leetcode.com/marjoriekohn/)
 
 
