@@ -11,7 +11,7 @@
 
 ## Introduction
 
-This project is a simple website that showcases a collection of solutions to challenge questions I encountered on websites like CodeWars, CodeSignal, and LeetCode. Users can interact with these solutions by inputting values and viewing the generated results. Additionally, a copy button is available for users to easily copy the source code. The initial purpose of this project was to create a personal repository of reusable, high-quality code to improve coding efficiency.
+This project is a simple website that showcases a collection of solutions to challenge questions I encountered on websites like CodeWars, CodeSignal, and LeetCode. Users can interact with these solutions by inputting values and viewing the generated results. Additionally, a copy button is available for users to easily copy the source code.
 
 ## Technologies Used
 
@@ -23,6 +23,7 @@ This project is a simple website that showcases a collection of solutions to cha
 ## Demo
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/45399bab-8dd7-4538-84d8-51dc4622afee/deploy-status)](https://app.netlify.com/sites/marjoriekohn-codesolutions/deploys)
+
 Visit the live demo at [https://codesolutions.marjoriekohn.com](https://codesolutions.marjoriekohn.com).
 
 
@@ -39,11 +40,11 @@ For submitting issues, please create a new issue in the GitHub repository and pr
 
 ## License
 
-This project is created by Mary Kohn and is free to use, modify, and distribute for personal or commercial purposes.
+This project is created by Marjorie Kohn and is free to use, modify, and distribute for personal or commercial purposes.
 This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact Information
 
-[LinkedIn](www.linkedin/in/marjoriekohn) | [E-mail](mailto:marymkohn@gmail.com) | [CodeWars](https://www.codewars.com/users/marjoriekohn) | [CodeSignal](https://app.codesignal.com/profile/marjoriekohn) | [LeetCode](https://leetcode.com/marjoriekohn/)
+[LinkedIn](www.linkedin.com/in/marjoriekohn) | [E-mail](mailto:marymkohn@gmail.com) | [CodeWars](https://www.codewars.com/users/marjoriekohn) | [CodeSignal](https://app.codesignal.com/profile/marjoriekohn) | [LeetCode](https://leetcode.com/marjoriekohn/)
 
 
