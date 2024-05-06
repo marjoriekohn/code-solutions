@@ -11,7 +11,7 @@ export const factorial = (number) => {
 
 export const factorialMetadata = {
 		functionName: 'factorial',
-		skills: ['recursion', 'conditional logic'],
+		skills: ['recursion', 'conditionals', 'math', 'algorithm'],
 		title: 'Recursion: Factorial',
 		description: 'This function takes in a number and returns its factorial.',
 		inputId: 'factorialInput',

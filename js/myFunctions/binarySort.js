@@ -27,7 +27,7 @@ export const binarySort = (input) => {
 
 export const binarySortMetadata = {
 		functionName: 'binarySort',
-		skills: ['binary sort', 'algorithm'],
+		skills: ['binary sort', 'algorithm', 'array manipulation', 'sorting'],
 		title: 'Binary Insertion Sort',
 		description: 'This function uses a binary insertion sort to sort an array of numbers you provide.',
 		inputPlaceholder: 'Example: 4, 7, 2, 3, 1',

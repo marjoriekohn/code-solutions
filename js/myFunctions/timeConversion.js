@@ -22,7 +22,7 @@ export const timeConversion = (minutes, format) => {
 // Metadata about the function
 export const timeConversionMetadata = {
 		functionName: 'timeConversion',
-		skills: ['time conversion', 'conditional logic', 'string formatting'],
+		skills: ['time conversion', 'conditionals'],
 		title: 'Time Conversion',
 		description: 'This function takes in a number of minutes and returns the equivalent in hours and minutes in a format of your choice.',
 		inputId: 'convertMinutesInput',

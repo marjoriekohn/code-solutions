@@ -41,7 +41,7 @@ export const dnaSequencing = (strandLength, format) => {
 // Metadata about the function
 export const dnaSequencingMetadata = {
 		functionName: 'dnaSequencingDNA',
-		skills: ['random data generation', 'array manipulation', 'string formatting'],
+		skills: ['random data generation', 'array manipulation'],
 		title: 'DNA sequencing',
 		description: 'This function generates a random DNA sequence of a specified length and format. Complementary DNA and RNA transcription are also available.',
 		inputPlaceholder: 'Enter length (e.g., 5)',

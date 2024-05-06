@@ -41,7 +41,7 @@ export const binarySearch = (() => {
 
 export const binarySearchMetadata = {
 		functionName: 'computerGuessNumber',
-		skills: ['binary search', 'conditionals'],
+		skills: ['binary search', 'algorithm'],
 		title: 'Binary Search',
 		description: 'The function uses a binary search to guess the number that you are thinking of. It will ask you if the number is too high, too low, or correct. It will then guess again based on your feedback.',
 		type: 'radio',

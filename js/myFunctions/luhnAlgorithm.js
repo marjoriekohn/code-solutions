@@ -52,7 +52,7 @@ export const luhnAlgorithm = (userInput) => {
 
 export const luhnAlgorithmMetadata = {
 		functionName: 'luhnAlgorithm',
-		skills: ['array methods', 'conditional logic', 'regular expressions', 'algorithms', 'pattern matching', 'data validation'],
+		skills: ['conditionals', 'regular expressions', 'algorithm', 'pattern matching', 'data validation'],
 		title: 'Luhn Algorithm',
 		description: 'This function uses the Luhn Algorithm to validate a credit card number. After validation, it uses' +
 				' regular expressions to identify the credit card provider. For test credit card numbers, visit https://stripe.com/docs/testing',

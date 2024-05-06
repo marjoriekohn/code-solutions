@@ -25,7 +25,7 @@ export const randomNumber = (numberRange) => {
 // Metadata about the function
 export const randomNumberMetadata = {
 		functionName: 'randomNumber',
-		skills: ['random data generation', 'conditional logic', 'input validation'],
+		skills: ['random data generation', 'conditionals', 'data validation'],
 		title: 'Random Number',
 		description: 'This function generates a random number.',
 		dropdownMenuId: 'numberRangeSelector',
