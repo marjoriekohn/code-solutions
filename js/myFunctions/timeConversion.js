@@ -1,4 +1,4 @@
-export const convertMinutes = (minutes, format) => {
+export const timeConversion = (minutes, format) => {
 		console.log(`converting ${minutes} minutes to ${format} format...`)
 		
 		if (minutes <= 0 || minutes === null || minutes === undefined || typeof minutes !== 'number') {
@@ -20,8 +20,8 @@ export const convertMinutes = (minutes, format) => {
 // add unit tests: test edge cases, expected behavior, and invalid inputs.
 
 // Metadata about the function
-export const convertMinutesMetadata = {
-		functionName: 'convertMinutes',
+export const timeConversionMetadata = {
+		functionName: 'timeConversion',
 		skills: ['time conversion', 'conditional logic', 'string formatting'],
 		title: 'Time Conversion',
 		description: 'This function takes in a number of minutes and returns the equivalent in hours and minutes in a format of your choice.',

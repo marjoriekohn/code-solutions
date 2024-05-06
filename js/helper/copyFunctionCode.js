@@ -1,10 +1,11 @@
-import {convertMinutes} from '../myFunctions/convertMinutes.js';
-import {validateAndIdentifyCard} from '../myFunctions/validateAndIdentifyCard.js';
-import {generateRandomDNA} from '../myFunctions/generateRandomDNA.js';
+import {timeConversion} from '../myFunctions/timeConversion.js';
+import {luhnAlgorithm} from '../myFunctions/luhnAlgorithm.js';
+import {dnaSequencing} from '../myFunctions/dnaSequencing.js';
 import {randomNumber} from '../myFunctions/randomNumber.js';
 import {fibonacciSequence} from "../myFunctions/Fibonacci.js";
 import {factorial} from "../myFunctions/factorial.js";
-import {computerGuessNumber} from "../myFunctions/computerGuessNumber.js";
+import {binarySearch} from "../myFunctions/binarySearch.js";
+import {binarySort} from "../myFunctions/binarySort.js";
 
 // copy code function
 export function copyFunctionCode(functionName, targetElement) {
@@ -12,26 +13,29 @@ export function copyFunctionCode(functionName, targetElement) {
 		let code = '';
 
 		switch (functionName) {
-				case 'convertMinutes':
-						code = convertMinutes.toString();
+				case 'timeConversion':
+						code = timeConversion.toString();
 						break;
-				case 'validateAndIdentifyCard':
-						code = validateAndIdentifyCard.toString();
+				case 'luhnAlgorithm':
+						code = luhnAlgorithm.toString();
 						break;
-				case 'generateRandomDNA':
-						code = generateRandomDNA.toString();
+				case 'dnaSequencing':
+						code = dnaSequencing.toString();
 						break;
 				case 'randomNumber':
 						code = randomNumber.toString();
 						break;
-				case 'computerGuessNumber':
-						code = computerGuessNumber.toString();
+				case 'binarySearch':
+						code = binarySearch.toString();
 						break;
 				case	'factorial':
 						code = factorial.toString();
 						break;
 				case 'fibonacciSequence':
 						code = fibonacciSequence.toString();
+						break;
+				case 'binarySort':
+						code = binarySort.toString();
 						break;
 		}
 		console.log("Captured code:", code);

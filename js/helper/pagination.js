@@ -1,23 +1,25 @@
 import {generateUI} from '../UI/generateUI.js';
-import {convertMinutes, convertMinutesMetadata} from "../myFunctions/convertMinutes.js";
-import {validateAndIdentifyCard, validateAndIdentifyCardMetadata} from "../myFunctions/validateAndIdentifyCard.js";
-import {generateRandomDNA, generateRandomDNAMetadata} from "../myFunctions/generateRandomDNA.js";
+import {timeConversion, timeConversionMetadata} from "../myFunctions/timeConversion.js";
+import {luhnAlgorithm, luhnAlgorithmMetadata} from "../myFunctions/luhnAlgorithm.js";
+import {dnaSequencing, dnaSequencingMetadata} from "../myFunctions/dnaSequencing.js";
 import {randomNumber, randomNumberMetadata} from "../myFunctions/randomNumber.js";
 import {fibonacciSequence, fibonacciSequenceMetadata} from "../myFunctions/Fibonacci.js";
 import {factorial, factorialMetadata} from "../myFunctions/factorial.js";
-import {computerGuessNumber, computerGuessNumberMetadata} from "../myFunctions/computerGuessNumber.js";
+import {binarySearch, binarySearchMetadata} from "../myFunctions/binarySearch.js";
+import {binarySort, binarySortMetadata} from "../myFunctions/binarySort.js";
 
 let currentPage = 1;
 const sectionsPerPage = 4;
 
 export const sectionsData = [
-		{function: validateAndIdentifyCard, metadata: validateAndIdentifyCardMetadata},
-		{function: generateRandomDNA, metadata: generateRandomDNAMetadata},
+		{function: luhnAlgorithm, metadata: luhnAlgorithmMetadata},
+		{function: dnaSequencing, metadata: dnaSequencingMetadata},
 		{function: fibonacciSequence, metadata: fibonacciSequenceMetadata},
 		{function: factorial, metadata: factorialMetadata},
-		{function: computerGuessNumber, metadata: computerGuessNumberMetadata},
-		{function: convertMinutes, metadata: convertMinutesMetadata},
+		{function: binarySearch, metadata: binarySearchMetadata},
+		{function: timeConversion, metadata: timeConversionMetadata},
 		{function: randomNumber, metadata: randomNumberMetadata},
+		{function: binarySort, metadata: binarySortMetadata}
 ];
 
 const totalPages = Math.ceil(sectionsData.length / sectionsPerPage);

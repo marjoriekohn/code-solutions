@@ -1,5 +1,5 @@
 import {goToNextPage, goToPreviousPage, initializePagination} from "./helper/pagination.js";
-import {computerGuessNumber, computerGuessNumberMetadata as metadata} from "./myFunctions/computerGuessNumber.js";
+import {binarySearch, binarySearchMetadata as metadata} from "./myFunctions/binarySearch.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 		console.log("DOMContentLoaded event fired");

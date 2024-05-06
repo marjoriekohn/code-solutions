@@ -1,6 +1,6 @@
 import {resetInput} from "./textInput.js";
 import {resetDropdown} from "./dropdownMenu.js";
-import {computerGuessNumber} from "../myFunctions/computerGuessNumber.js";
+import {binarySearch} from "../myFunctions/binarySearch.js";
 import {resetRadioButtons} from "./radioButtons.js";
 
 export function resetButton(metadata){
@@ -20,7 +20,7 @@ export function resetButton(metadata){
 								resetRadioButtons(metadata);
 						}
 						if(metadata.autoExecute) {
-								document.getElementById('computerGuessNumberOutput').textContent = computerGuessNumber();
+								document.getElementById('computerGuessNumberOutput').textContent = binarySearch();
 						} else {
 								document.getElementById(metadata.outputId).innerHTML = '';
 						}

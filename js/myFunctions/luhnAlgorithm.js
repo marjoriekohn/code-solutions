@@ -1,4 +1,4 @@
-export const validateAndIdentifyCard = (userInput) => {
+export const luhnAlgorithm = (userInput) => {
 
 		let creditCardCompany = '';
 		let creditCardCompanyIcon = '';
@@ -50,8 +50,8 @@ export const validateAndIdentifyCard = (userInput) => {
 // 5. Allow for card numbers with spaces or dashes and sanitize the input accordingly.
 // 8. add unit tests: test edge cases, expected behavior, invalid inputs, correct length, only contains digits
 
-export const validateAndIdentifyCardMetadata = {
-		functionName: 'validateAndIdentifyCard',
+export const luhnAlgorithmMetadata = {
+		functionName: 'luhnAlgorithm',
 		skills: ['array methods', 'conditional logic', 'regular expressions', 'algorithms', 'pattern matching', 'data validation'],
 		title: 'Luhn Algorithm',
 		description: 'This function uses the Luhn Algorithm to validate a credit card number. After validation, it uses' +

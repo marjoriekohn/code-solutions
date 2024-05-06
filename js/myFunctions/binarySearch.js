@@ -2,7 +2,7 @@
 // generate random number function will call guessNumber
 // guess number will only compare if the number is less, more, or equal to the given number
 
-export const computerGuessNumber = (() => {
+export const binarySearch = (() => {
 		let computerGuessCount = 0;
 		let minimumNumber = 1;
 		let maximumNumber = 100;
@@ -39,7 +39,7 @@ export const computerGuessNumber = (() => {
 })();
 
 
-export const computerGuessNumberMetadata = {
+export const binarySearchMetadata = {
 		functionName: 'computerGuessNumber',
 		skills: ['binary search', 'conditionals'],
 		title: 'Binary Search',

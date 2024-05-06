@@ -1,4 +1,4 @@
-export const generateRandomDNA = (strandLength, format) => {
+export const dnaSequencing = (strandLength, format) => {
 		console.log(`Length: ${strandLength}, Format: ${format}`)
 		
 		if (strandLength !== Number(strandLength) || strandLength < 0 || !Number.isInteger(strandLength)) {
@@ -39,8 +39,8 @@ export const generateRandomDNA = (strandLength, format) => {
 
 
 // Metadata about the function
-export const generateRandomDNAMetadata = {
-		functionName: 'generateRandomDNA',
+export const dnaSequencingMetadata = {
+		functionName: 'dnaSequencingDNA',
 		skills: ['random data generation', 'array manipulation', 'string formatting'],
 		title: 'DNA sequencing',
 		description: 'This function generates a random DNA sequence of a specified length and format. Complementary DNA and RNA transcription are also available.',

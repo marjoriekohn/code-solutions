@@ -24,8 +24,8 @@ export function submitButton(metadata, functionToExecute){
 								}
 						}
 				}
-				console.log('rawInputs: ' + rawInputs + ' typeof rawInputs: ' + typeof rawInputs);
 				const processedInputs = metadata.processInput ? metadata.processInput(...rawInputs) : rawInputs;
+				console.log('rawInputs: ' + rawInputs + ' typeof rawInputs: ' + typeof rawInputs);
 				console.log('processedInputs: ' + processedInputs  + ' typeof processedInputs: ' + typeof processedInputs);
 				let result = functionToExecute(...processedInputs);
 				displayResult(metadata, result);

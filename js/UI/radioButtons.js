@@ -1,4 +1,4 @@
-import {computerGuessNumber} from "../myFunctions/computerGuessNumber.js";
+import {binarySearch} from "../myFunctions/binarySearch.js";
 
 export function radioButtons(metadata) {
 		console.log(`Generating radio buttons for ${metadata.title}`);
@@ -38,7 +38,7 @@ export function getRadioButtonValue(metadata) {
 }
 
 export function resetRadioButtons(metadata) {
-		computerGuessNumber.reset();
+		binarySearch.reset();
 		const radioButtons = document.querySelectorAll(`input[type="radio"]:checked`);
 		radioButtons.forEach((radioButton) => {
 				radioButton.checked = false;
